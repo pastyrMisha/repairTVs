@@ -1,12 +1,9 @@
 @import 'reset.scss';
 
-@mixin font-montserrat {
-    font-family: 'Montserrat', sans-serif;
+@mixin font-roboto {
+    font-family: 'Roboto', sans-serif;
 }
 
-@mixin font-raleway {
-    font-family: 'Raleway', sans-serif;
-}
 
 // === / Mixins ===
 
@@ -37,9 +34,12 @@ $screen-xl-max: 1499px;
 // === / Variables ===
 
 // === Common ===
+* {
+    box-sizing: border-box;
+}
 
 body {
-    @include font-raleway;
+    @include font-roboto;
     background: white;
     color: #4b4b4b;
     margin-left: 0px;
@@ -51,7 +51,7 @@ h2,
 h3,
 h4,
 input {
-    @include font-montserrat;
+    @include font-roboto;
 }
 
 img {
