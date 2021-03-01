@@ -739,17 +739,12 @@ header {
 
 // === footercall ===
 .section-footercall {
-    background: $color-footer;
-    margin: 90px 0px 0px;
-    padding: 60px 0px 90px;
+   
 
     &-content {
-        display: flex;
+        
 
-        &-operator {
-            padding-left: 20px;
-            flex-grow: 1;
-        }
+      
     }
 
     &-wrapper {
@@ -759,22 +754,9 @@ header {
         text-align: center;
         padding-top: 40px;
 
-        &__title {
-            color: #fff;
-            font-weight: 700;
-            font-size: $h2-size;
-            flex-grow: 1;
+       
 
-        }
-
-        &__subtitle {
-            color: #fff;
-            font-weight: 300;
-            font-size: $h3-size;
-            flex-grow: 1;
-            margin-bottom: 30px;
-
-        }
+       
 
         &__form {
             flex-grow: 2;
@@ -907,25 +889,17 @@ header {
     }
 
     @media (max-width: $screen-md-max) {
-        padding-bottom: 30px;
-        margin-top: 60px;
+        
 
         &-content {
-            flex-wrap: wrap;
+            
 
-            &-operator {
-                padding-left: 0px;
-                text-align: center;
-            }
+          
         }
 
         &-wrapper {
 
-            &__title,
-            &__subtitle {
-                padding-left: 10px;
-                padding-right: 10px;
-            }
+           
 
             &__form {
                 margin-top: 30px;
@@ -956,22 +930,16 @@ header {
 
     @media (min-width: $screen-md) and (max-width: $screen-md-max) {
         &-content {
-            &-operator {
-                margin-left: 20px;
-            }
         }
 
         &-wrapper {
-            &__subtitle {
-                padding-left: 30px;
-                padding-right: 30px;
-            }
+           
         }
     }
 
     @media (min-width: $screen-sm) {
         &-content {
-            align-items: center;
+            
         }
     }
 
