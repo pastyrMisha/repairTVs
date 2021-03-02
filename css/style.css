@@ -572,33 +572,49 @@ header {
 
 .section-instructions {
   position: relative; }
+  .section-instructions .accordion {
+    background-color: #eee;
+    color: #363636;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.4s;
+    font-weight: bold; }
+  .section-instructions .active, .section-instructions .accordion:hover {
+    background-color: #ccc; }
+  .section-instructions .accordion::before {
+    content: url("/img/next.svg");
+    padding-right: 20px;
+    padding-left: 20px;
+    vertical-align: middle; }
+  .section-instructions .active::before {
+    content: url("/img/gbottom.svg");
+    padding-right: 20px;
+    padding-left: 20px;
+    vertical-align: middle; }
+  .section-instructions .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-out; }
+    .section-instructions .panel ul {
+      padding-left: 40px; }
+      .section-instructions .panel ul li:first-child {
+        padding-bottom: 20px; }
+      .section-instructions .panel ul li span {
+        visibility: hidden; }
   .section-instructions-content {
     display: flex;
     flex-direction: column;
     position: absolute;
     width: 564px;
     right: 25%;
-    bottom: 35%; }
-    .section-instructions-content__list-one, .section-instructions-content__list-two, .section-instructions-content__list-three {
-      background: #EEEEEE;
-      border: 1px solid #CDCDCD;
-      height: 54px;
-      margin-bottom: 16px; }
-      .section-instructions-content__list-one h3, .section-instructions-content__list-two h3, .section-instructions-content__list-three h3 {
-        cursor: pointer; }
-        .section-instructions-content__list-one h3::before, .section-instructions-content__list-two h3::before, .section-instructions-content__list-three h3::before {
-          content: url("/img/next.svg");
-          padding-right: 20px;
-          padding-left: 20px;
-          vertical-align: middle; }
-      .section-instructions-content__list-one ul, .section-instructions-content__list-two ul, .section-instructions-content__list-three ul {
-        visibility: hidden;
-        position: absolute;
-        padding-left: 40px; }
-        .section-instructions-content__list-one ul li:first-child, .section-instructions-content__list-two ul li:first-child, .section-instructions-content__list-three ul li:first-child {
-          padding-bottom: 20px; }
-        .section-instructions-content__list-one ul li span, .section-instructions-content__list-two ul li span, .section-instructions-content__list-three ul li span {
-          visibility: hidden; }
+    bottom: 23%; }
 
 .section-footercall {
   background: #32CD32; }
