@@ -778,6 +778,24 @@ background: $color-grey;
     background: url('/img/family.jpg') no-repeat;
     background-size: contain;
     height: 694px;
+    &-content {
+        display: flex;
+        flex-direction: column;
+        &__list {
+            &-one, &-two, &-three {
+                h3 {
+                    &::before {
+                        content: url('/img/next.svg');
+                        padding-right: 20px;
+                        vertical-align: middle;
+                    }
+                }
+                li {
+                    display: none;
+                }
+            }
+        }
+    }
 }
 // === / instructions ===
 

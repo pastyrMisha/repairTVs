@@ -574,6 +574,15 @@ header {
   background: url("/img/family.jpg") no-repeat;
   background-size: contain;
   height: 694px; }
+  .section-instructions-content {
+    display: flex;
+    flex-direction: column; }
+    .section-instructions-content__list-one h3::before, .section-instructions-content__list-two h3::before, .section-instructions-content__list-three h3::before {
+      content: url("/img/next.svg");
+      padding-right: 20px;
+      vertical-align: middle; }
+    .section-instructions-content__list-one li, .section-instructions-content__list-two li, .section-instructions-content__list-three li {
+      display: none; }
 
 .section-footercall {
   background: #32CD32; }
