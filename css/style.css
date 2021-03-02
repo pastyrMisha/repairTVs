@@ -178,6 +178,10 @@ img {
   max-width: 100%;
   height: auto; }
 
+a {
+  text-decoration: none;
+  color: #363636; }
+
 .section-outer {
   padding-right: 20px;
   padding-left: 20px; }
@@ -191,10 +195,11 @@ img {
 header {
   height: 800px;
   background: url("/img/main_back_2.jpg") no-repeat;
-  background-size: cover; }
+  background-size: contain; }
 
 .section-preheader {
-  height: 90px; }
+  height: 90px;
+  background: rgba(0, 0, 0, 0.5); }
   .section-preheader-content {
     display: flex;
     justify-content: space-between;
@@ -202,7 +207,7 @@ header {
     padding-bottom: 10px; }
 
 .section-header-content__subtitle::before {
-  content: url("/img/clock.png");
+  content: url("/img/nike.svg");
   padding-right: 20px;
   vertical-align: middle; }
 
@@ -211,6 +216,11 @@ header {
   align-items: center;
   justify-content: space-between;
   position: relative; }
+  .section-header-wrapper::after {
+    position: absolute;
+    content: url("/img/sale.png");
+    top: 158px;
+    left: -50px; }
   .section-header-wrapper__form {
     background: #fff;
     max-width: 400px;
@@ -541,7 +551,8 @@ header {
   background: #EBEBEB; }
 
 .section-instructions {
-  background: url("/img/family.jpg");
+  background: url("/img/family.jpg") no-repeat;
+  background-size: contain;
   height: 694px; }
 
 .section-footercall {
