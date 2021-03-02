@@ -583,12 +583,14 @@ header {
     outline: none;
     font-size: 18px;
     transition: 0.4s;
-    font-weight: bold; }
-  .section-instructions .active, .section-instructions .accordion:hover {
+    font-weight: bold;
+    margin-bottom: 20px; }
+  .section-instructions .active,
+  .section-instructions .accordion:hover {
     background-color: #ccc; }
   .section-instructions .accordion::before {
     content: url("/img/next.svg");
-    padding-right: 20px;
+    padding-right: 26px;
     padding-left: 20px;
     vertical-align: middle; }
   .section-instructions .active::before {
@@ -604,8 +606,6 @@ header {
     transition: all 0.2s ease-out; }
     .section-instructions .panel ul {
       padding-left: 40px; }
-      .section-instructions .panel ul li:first-child {
-        padding-bottom: 20px; }
       .section-instructions .panel ul li span {
         visibility: hidden; }
   .section-instructions-content {
@@ -614,7 +614,9 @@ header {
     position: absolute;
     width: 564px;
     right: 25%;
-    bottom: 23%; }
+    bottom: 12%; }
+  .section-instructions .panelThree__title {
+    padding-bottom: 20px; }
 
 .section-footercall {
   background: #32CD32; }

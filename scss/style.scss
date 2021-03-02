@@ -65,6 +65,7 @@ a {
     text-decoration: none;
     color: $color-black;
 }
+
 .section-outer {
     padding-right: 20px;
     padding-left: 20px;
@@ -76,17 +77,20 @@ a {
     display: flex;
     flex-direction: column;
 }
+
 header {
     height: 800px;
     background: url('/img/main_back_2.jpg') no-repeat;
     background-size: contain;
 }
+
 // === / Common ===
 
 // === pre-header ===
 .section-preheader {
     height: 90px;
     background: rgba(0, 0, 0, 0.5);
+
     &-content {
         display: flex;
         justify-content: space-between;
@@ -94,29 +98,17 @@ header {
         padding-bottom: 10px;
     }
 
-    @media (max-width: $screen-md-max) {
-   
-    }
+    @media (max-width: $screen-md-max) {}
 
-    @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
- 
-    }
+    @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {}
 
-    @media (max-width: $screen-sm-max) {
-       
-            }
+    @media (max-width: $screen-sm-max) {}
 
-    @media (max-width: $screen-sm-max) {
-  
-    }
+    @media (max-width: $screen-sm-max) {}
 
-    @media (max-width: $screen-xs-max) {
-   
-    }
+    @media (max-width: $screen-xs-max) {}
 
-    @media (max-width: $screen-xs) {
- 
-    }
+    @media (max-width: $screen-xs) {}
 }
 
 // === / pre-header ===
@@ -125,9 +117,9 @@ header {
 
 
 .section-header {
-   
+
     &-content {
-       
+
         &__subtitle {
             &::before {
                 content: url('/img/nike.svg');
@@ -142,12 +134,14 @@ header {
         align-items: center;
         justify-content: space-between;
         position: relative;
+
         &::after {
             position: absolute;
             content: url('/img/sale.png');
             top: 158px;
             left: -50px;
         }
+
         &__form {
             background: #fff;
             max-width: 400px;
@@ -156,7 +150,7 @@ header {
             padding: 0px 20px 20px;
             box-shadow: 0 0 10px $color-holder;
             position: relative;
-            
+
 
             // === _sending ===
 
@@ -171,14 +165,14 @@ header {
                 opacity: 0;
                 visibility: hidden;
             }
-            
+
 
             &._sending {
                 &::after {
                     opacity: 1;
                     visibility: visible;
-                    
-                }  
+
+                }
             }
 
             // === / _sending ===
@@ -372,23 +366,25 @@ header {
     @media (max-width: $screen-lg-max) {
         &-wrapper {
             flex-wrap: wrap;
-            &__form {
-                // ===  _welldone ===
-            &::before {
-                content: 'Заявка отправлена!';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(239, 246, 245, 1) url('../img/anim-check.gif') center / 50px no-repeat;
-                opacity: 0;
-                visibility: hidden;
-                text-align: center;
-                line-height: 28;
-            }
 
-            // ===  / _welldone ===
+            &__form {
+
+                // ===  _welldone ===
+                &::before {
+                    content: 'Заявка отправлена!';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(239, 246, 245, 1) url('../img/anim-check.gif') center / 50px no-repeat;
+                    opacity: 0;
+                    visibility: hidden;
+                    text-align: center;
+                    line-height: 28;
+                }
+
+                // ===  / _welldone ===
             }
         }
     }
@@ -511,24 +507,28 @@ header {
     @media (max-width: $screen-xs-max) {
         &-wrapper {
             &__form {
+
                 // ===  _welldone ===
-            &::before {
-                line-height: 29;
-            }
-            // ===  / _welldone ===
+                &::before {
+                    line-height: 29;
+                }
+
+                // ===  / _welldone ===
             }
         }
     }
+
     @media (max-width: 360px) {
 
         &-wrapper {
             &__form {
-                // ===  _welldone ===
-            &::before {
-                line-height: 32;
-            }
 
-            // ===  / _welldone ===
+                // ===  _welldone ===
+                &::before {
+                    line-height: 32;
+                }
+
+                // ===  / _welldone ===
                 &-input {
                     &._error {
                         &::before {
@@ -550,6 +550,7 @@ header {
 // === promo ===
 .section-promo {
     background: $color-yellow;
+
     &-content {
         margin-bottom: 95px;
         margin-top: 30px;
@@ -574,7 +575,8 @@ header {
 
             }
 
-            &-title, &-subtitle {
+            &-title,
+            &-subtitle {
                 text-align: center;
 
             }
@@ -686,7 +688,9 @@ header {
     padding: 60px 0px;
 
     &-content {
-        &__title, &__subtitle  {
+
+        &__title,
+        &__subtitle {
             text-align: center;
             font-size: $h3-size;
             margin-bottom: 60px;
@@ -737,45 +741,55 @@ header {
 
 // === brands ===
 .section-brands {
-background: $color-grey;
+    background: $color-grey;
+
     &-content {
         &__slider {
-        height: 82px;
-        overflow: hidden;
-        
-        &-line {
-            width: 1920px;
             height: 82px;
-            display: flex;
-            position: relative;
-            left: 0;
-            transition: all ease 1s;
-            
-        }
-    }
-    &__button {
-        position: relative;
-        &-prev, &-next {
-            position: absolute;
-            border: 0;
-            background: transparent;
-            bottom: 31px;
-        }
-        &-prev {
-            left: -30px;
-        }
-        &-next {
-            right: -30px;
+            overflow: hidden;
 
+            &-line {
+                width: 1920px;
+                height: 82px;
+                display: flex;
+                position: relative;
+                left: 0;
+                transition: all ease 1s;
+
+            }
         }
-    }
+
+        &__button {
+            position: relative;
+
+            &-prev,
+            &-next {
+                position: absolute;
+                border: 0;
+                background: transparent;
+                bottom: 31px;
+            }
+
+            &-prev {
+                left: -30px;
+            }
+
+            &-next {
+                right: -30px;
+
+            }
+        }
     }
 }
+
 // === / brands ===
 
 // === instructions ===
 .section-instructions {
     position: relative;
+
+    // === accordion ===
+
     .accordion {
         background-color: #eee;
         color: $color-black;
@@ -788,103 +802,73 @@ background: $color-grey;
         font-size: 18px;
         transition: 0.4s;
         font-weight: bold;
-      }
-      
-      .active, .accordion:hover {
+        margin-bottom: 20px;
+    }
+
+    .active,
+    .accordion:hover {
         background-color: #ccc;
-      }
-      
-      .accordion::before {
+    }
+
+    .accordion::before {
         content: url('/img/next.svg');
-        padding-right: 20px;
+        padding-right: 26px;
         padding-left: 20px;
         vertical-align: middle;
-      }
-      
-      .active::before {
+    }
+
+    .active::before {
         content: url('/img/gbottom.svg');
         padding-right: 20px;
         padding-left: 20px;
         vertical-align: middle;
-      }
-      
-      .panel {
+    }
+
+    .panel {
         padding: 0 18px;
         background-color: white;
         max-height: 0;
         overflow: hidden;
         transition: all 0.2s ease-out;
+
         ul {
             padding-left: 40px;
+
             li {
-                &:first-child {
-                    padding-bottom: 20px;
-                }
                 span {
                     visibility: hidden;
-                    
+
                 }
             }
         }
-      }
-        
-    
+    }
+
+    // === / accordion ===
+
+
     &-content {
         display: flex;
         flex-direction: column;
         position: absolute;
         width: 564px;
         right: 25%;
-        bottom: 23%;
-        // &__list {
-        //     &-one, &-two, &-three {
-        //         background: #EEEEEE;
-        //         border: 1px solid #CDCDCD;
-        //         height: 54px;
-        //         margin-bottom: 16px;
-        //         h3 {
-                   
-        //             cursor: pointer;
-        //             &::before {
-        //                 content: url('/img/next.svg');
-        //                 padding-right: 20px;
-        //                 padding-left: 20px;
-        //                 vertical-align: middle;
-                       
-        //             }
-        //         }
-                // ul {
-                //     visibility: hidden;
-                //     position: absolute;
-                //     padding-left: 40px;
-                //     li {
-                //         &:first-child {
-                //             padding-bottom: 20px;
-                //         }
-                //         span {
-                //             visibility: hidden;
-                            
-                //         }
-                //     }
-                // }
-        //     }
-        // }
+        bottom: 12%;
+    }
 
+    .panelThree__title {
+        padding-bottom: 20px;
     }
 }
+
 // === / instructions ===
 
 
 
 // === footercall ===
 .section-footercall {
-   background: $color-green;
+    background: $color-green;
 
-    &-content {
-        
-
-      
-    }
+    &-content {}
 
     &-wrapper {
         display: flex;
@@ -893,9 +877,9 @@ background: $color-grey;
         text-align: center;
         padding-top: 40px;
 
-       
 
-       
+
+
 
         &__form {
             flex-grow: 2;
@@ -1028,17 +1012,13 @@ background: $color-grey;
     }
 
     @media (max-width: $screen-md-max) {
-        
 
-        &-content {
-            
 
-          
-        }
+        &-content {}
 
         &-wrapper {
 
-           
+
 
             &__form {
                 margin-top: 30px;
@@ -1068,18 +1048,13 @@ background: $color-grey;
     }
 
     @media (min-width: $screen-md) and (max-width: $screen-md-max) {
-        &-content {
-        }
+        &-content {}
 
-        &-wrapper {
-           
-        }
+        &-wrapper {}
     }
 
     @media (min-width: $screen-sm) {
-        &-content {
-            
-        }
+        &-content {}
     }
 
     @media (max-width: $screen-xs-max) {
@@ -1435,6 +1410,7 @@ background: $color-grey;
 
 .modal__popup {
     z-index: 10;
+
     &:hover {
         animation: rota 4s infinite normal;
         -webkit-animation-iteration-count: 1;
@@ -1447,7 +1423,7 @@ background: $color-grey;
         background: url(https://codernote.ru/files/cross.png) no-repeat center center;
         background-size: 16px 16px;
         display: block;
-        
+
         &:focus {
             cursor: pointer;
         }
@@ -1486,30 +1462,30 @@ background: $color-grey;
     }
 
     // === / _modalsending ===
-// ===  _welldone ===
-&::before {
-    content: 'Заявка отправлена!';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(239, 246, 245, 1) url('../img/anim-check.gif') center / 50px no-repeat;
-    opacity: 0;
-    visibility: hidden;
-    text-align: center;
-    line-height: 20;
-}
-
-&._welldone {
+    // ===  _welldone ===
     &::before {
-        opacity: 1;
-        visibility: visible;
-        z-index: 9;
+        content: 'Заявка отправлена!';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(239, 246, 245, 1) url('../img/anim-check.gif') center / 50px no-repeat;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        line-height: 20;
     }
-}
 
-// ===  / _welldone ===
+    &._welldone {
+        &::before {
+            opacity: 1;
+            visibility: visible;
+            z-index: 9;
+        }
+    }
+
+    // ===  / _welldone ===
 
     &-title {
         padding-left: 10px;
