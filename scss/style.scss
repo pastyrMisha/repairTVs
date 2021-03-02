@@ -80,7 +80,6 @@ header {
     height: 800px;
     background: url('/img/main_back_2.jpg') no-repeat;
     background-size: contain;
-    
 }
 // === / Common ===
 
@@ -743,15 +742,32 @@ background: $color-grey;
     &-content {
         &__slider {
         height: 82px;
-        outline: 2px solid black; 
         overflow: hidden;
+        
         &-line {
             width: 1920px;
             height: 82px;
             display: flex;
             position: relative;
+            left: 0;
+            transition: all ease 1s;
             
-            
+        }
+    }
+    &__button {
+        position: relative;
+        &-prev, &-next {
+            position: absolute;
+            border: 0;
+            background: transparent;
+            bottom: 31px;
+        }
+        &-prev {
+            left: -30px;
+        }
+        &-next {
+            right: -30px;
+
         }
     }
     }

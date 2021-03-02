@@ -551,13 +551,25 @@ header {
   background: #EBEBEB; }
   .section-brands-content__slider {
     height: 82px;
-    outline: 2px solid black;
     overflow: hidden; }
     .section-brands-content__slider-line {
       width: 1920px;
       height: 82px;
       display: flex;
-      position: relative; }
+      position: relative;
+      left: 0;
+      transition: all ease 1s; }
+  .section-brands-content__button {
+    position: relative; }
+    .section-brands-content__button-prev, .section-brands-content__button-next {
+      position: absolute;
+      border: 0;
+      background: transparent;
+      bottom: 31px; }
+    .section-brands-content__button-prev {
+      left: -30px; }
+    .section-brands-content__button-next {
+      right: -30px; }
 
 .section-instructions {
   background: url("/img/family.jpg") no-repeat;
