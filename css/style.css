@@ -571,18 +571,34 @@ header {
       right: -30px; }
 
 .section-instructions {
-  background: url("/img/family.jpg") no-repeat;
-  background-size: contain;
-  height: 694px; }
+  position: relative; }
   .section-instructions-content {
     display: flex;
-    flex-direction: column; }
-    .section-instructions-content__list-one h3::before, .section-instructions-content__list-two h3::before, .section-instructions-content__list-three h3::before {
-      content: url("/img/next.svg");
-      padding-right: 20px;
-      vertical-align: middle; }
-    .section-instructions-content__list-one li, .section-instructions-content__list-two li, .section-instructions-content__list-three li {
-      display: none; }
+    flex-direction: column;
+    position: absolute;
+    width: 564px;
+    right: 25%;
+    bottom: 35%; }
+    .section-instructions-content__list-one, .section-instructions-content__list-two, .section-instructions-content__list-three {
+      background: #EEEEEE;
+      border: 1px solid #CDCDCD;
+      height: 54px;
+      margin-bottom: 16px; }
+      .section-instructions-content__list-one h3, .section-instructions-content__list-two h3, .section-instructions-content__list-three h3 {
+        cursor: pointer; }
+        .section-instructions-content__list-one h3::before, .section-instructions-content__list-two h3::before, .section-instructions-content__list-three h3::before {
+          content: url("/img/next.svg");
+          padding-right: 20px;
+          padding-left: 20px;
+          vertical-align: middle; }
+      .section-instructions-content__list-one ul, .section-instructions-content__list-two ul, .section-instructions-content__list-three ul {
+        visibility: hidden;
+        position: absolute;
+        padding-left: 40px; }
+        .section-instructions-content__list-one ul li:first-child, .section-instructions-content__list-two ul li:first-child, .section-instructions-content__list-three ul li:first-child {
+          padding-bottom: 20px; }
+        .section-instructions-content__list-one ul li span, .section-instructions-content__list-two ul li span, .section-instructions-content__list-three ul li span {
+          visibility: hidden; }
 
 .section-footercall {
   background: #32CD32; }
@@ -1051,3 +1067,6 @@ header {
         .modal__form-input input {
           box-sizing: border-box;
           width: 100%; } }
+
+.accShow {
+  visibility: visible !important; }

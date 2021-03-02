@@ -775,23 +775,48 @@ background: $color-grey;
 
 // === instructions ===
 .section-instructions {
-    background: url('/img/family.jpg') no-repeat;
-    background-size: contain;
-    height: 694px;
+    position: relative;
+        img {
+            
+        }
+    
     &-content {
         display: flex;
         flex-direction: column;
+        position: absolute;
+        width: 564px;
+        right: 25%;
+        bottom: 35%;
         &__list {
             &-one, &-two, &-three {
+                background: #EEEEEE;
+                border: 1px solid #CDCDCD;
+                height: 54px;
+                margin-bottom: 16px;
                 h3 {
+                   
+                    cursor: pointer;
                     &::before {
                         content: url('/img/next.svg');
                         padding-right: 20px;
+                        padding-left: 20px;
                         vertical-align: middle;
+                       
                     }
                 }
-                li {
-                    display: none;
+                ul {
+                    visibility: hidden;
+                    position: absolute;
+                    padding-left: 40px;
+                    li {
+                        &:first-child {
+                            padding-bottom: 20px;
+                        }
+                        span {
+                            visibility: hidden;
+                            
+                        }
+                    }
                 }
             }
         }
@@ -1536,3 +1561,7 @@ background: $color-grey;
 }
 
 // === / callback form ===
+
+.accShow {
+    visibility: visible !important;
+}
