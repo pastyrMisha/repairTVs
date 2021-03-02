@@ -585,6 +585,8 @@ header {
     transition: 0.4s;
     font-weight: bold;
     margin-bottom: 20px; }
+  .section-instructions .active {
+    margin-bottom: 0px; }
   .section-instructions .active,
   .section-instructions .accordion:hover {
     background-color: #ccc; }

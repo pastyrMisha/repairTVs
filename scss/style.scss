@@ -805,6 +805,10 @@ header {
         margin-bottom: 20px;
     }
 
+    .active {
+        margin-bottom: 0px;
+    }
+
     .active,
     .accordion:hover {
         background-color: #ccc;
