@@ -549,6 +549,15 @@ header {
 
 .section-brands {
   background: #EBEBEB; }
+  .section-brands-content__slider {
+    height: 82px;
+    outline: 2px solid black;
+    overflow: hidden; }
+    .section-brands-content__slider-line {
+      width: 1920px;
+      height: 82px;
+      display: flex;
+      position: relative; }
 
 .section-instructions {
   background: url("/img/family.jpg") no-repeat;

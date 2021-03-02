@@ -80,6 +80,7 @@ header {
     height: 800px;
     background: url('/img/main_back_2.jpg') no-repeat;
     background-size: contain;
+    
 }
 // === / Common ===
 
@@ -739,6 +740,21 @@ header {
 // === brands ===
 .section-brands {
 background: $color-grey;
+    &-content {
+        &__slider {
+        height: 82px;
+        outline: 2px solid black; 
+        overflow: hidden;
+        &-line {
+            width: 1920px;
+            height: 82px;
+            display: flex;
+            position: relative;
+            
+            
+        }
+    }
+    }
 }
 // === / brands ===
 
