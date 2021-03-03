@@ -236,7 +236,7 @@ button {
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            padding: 20px 60px;
             box-shadow: 0 0 10px $color-holder;
             position: relative;
             font-size: $h4-size;
@@ -355,6 +355,7 @@ button {
 
             &-checkbox {
                 font-size: 12px;
+                display: none;
 
                 &._error {
                     label {
@@ -823,7 +824,9 @@ button {
             &-icon {
                 text-align: center;
                 margin-bottom: 30px;
-
+                img {
+                    cursor: pointer;
+                }
                 h4 {
                     font-weight: 700;
                     margin-bottom: 0;
@@ -905,6 +908,9 @@ button {
 // === instructions ===
 .section-instructions {
     position: relative;
+    img {
+        
+    }
 
     // === accordion ===
 
@@ -973,7 +979,7 @@ button {
         display: flex;
         flex-direction: column;
         position: absolute;
-        width: 564px;
+        max-width: 564px;
         right: 25%;
         bottom: 12%;
     }
@@ -1250,14 +1256,14 @@ button {
 
                 &-input {
                     &._error {
-                        &::before {
-                            position: absolute;
-                            content: 'Заполните обязательные поля!';
-                            font-size: 16px;
-                            color: $color-red;
-                            top: -35px;
-                            left: 30%;
-                        }
+                        // &::before {
+                        //     position: absolute;
+                        //     content: 'Заполните обязательные поля!';
+                        //     font-size: 16px;
+                        //     color: $color-red;
+                        //     top: -35px;
+                        //     left: 30%;
+                        // }
                     }
                 }
             }
@@ -1279,14 +1285,14 @@ button {
             &__form {
                 &-input {
                     &._error {
-                        &::before {
-                            position: absolute;
-                            content: 'Заполните обязательные поля!';
-                            font-size: 16px;
-                            color: $color-red;
-                            top: -35px;
-                            left: 15%;
-                        }
+                        // &::before {
+                        //     position: absolute;
+                        //     content: 'Заполните обязательные поля!';
+                        //     font-size: 16px;
+                        //     color: $color-red;
+                        //     top: -35px;
+                        //     left: 15%;
+                        // }
                     }
                 }
             }
@@ -1606,12 +1612,11 @@ button {
     width: 30px;
     height: 30px;
     background: #FFFFFF;
-    border: 1px solid #AFAFAF;
     border-radius: 15px;
     cursor: pointer;
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 8px;
+    right: 11px;
 
     @media (max-width: $screen-sm-max) {
         top: -10px;
@@ -1635,8 +1640,8 @@ button {
     }
 
     i {
-        width: 29px;
-        height: 29px;
+        width: 30px;
+        height: 30px;
         background: url(https://codernote.ru/files/cross.png) no-repeat center center;
         background-size: 16px 16px;
         display: block;
@@ -1717,14 +1722,14 @@ p {
         margin-bottom: 30px;
 
         &._error {
-            &::before {
-                position: absolute;
-                content: 'Заполните обязательные поля!';
-                font-size: 16px;
-                color: $color-red;
-                top: 55%;
-                left: 5%;
-            }
+            // &::before {
+            //     position: absolute;
+            //     content: 'Заполните обязательные поля!';
+            //     font-size: 16px;
+            //     color: $color-red;
+            //     top: 55%;
+            //     left: 5%;
+            // }
         }
 
         input {
@@ -1748,7 +1753,6 @@ p {
 
             &._error {
                 box-shadow: 0 0 10px $color-red;
-                margin-bottom: 20px;
             }
         }
     }

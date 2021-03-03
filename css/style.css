@@ -286,7 +286,7 @@ button {
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      padding: 20px;
+      padding: 20px 60px;
       box-shadow: 0 0 10px #b9b9b9;
       position: relative;
       font-size: 21px;
@@ -351,7 +351,8 @@ button {
         .section-header-wrapper__form-input input._error {
           box-shadow: 0 0 10px #cc3333; }
       .section-header-wrapper__form-checkbox {
-        font-size: 12px; }
+        font-size: 12px;
+        display: none; }
         .section-header-wrapper__form-checkbox._error label::before {
           box-shadow: 0 0 10px #cc3333;
           transition: all 0.5s ease 0s; }
@@ -594,6 +595,8 @@ button {
       .section-whywe-wrapper__box-icon {
         text-align: center;
         margin-bottom: 30px; }
+        .section-whywe-wrapper__box-icon img {
+          cursor: pointer; }
         .section-whywe-wrapper__box-icon h4 {
           font-weight: 700;
           margin-bottom: 0; }
@@ -683,7 +686,7 @@ button {
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 564px;
+    max-width: 564px;
     right: 25%;
     bottom: 12%; }
   .section-instructions .panelThree__title {
@@ -845,22 +848,7 @@ button {
       height: 200px;
       justify-content: space-between; }
       .section-footercall-wrapper__form-input, .section-footercall-wrapper__form-button {
-        width: 80%; }
-      .section-footercall-wrapper__form-input._error::before {
-        position: absolute;
-        content: 'Заполните обязательные поля!';
-        font-size: 16px;
-        color: #cc3333;
-        top: -35px;
-        left: 30%; } }
-  @media (max-width: 575px) {
-    .section-footercall-wrapper__form-input._error::before {
-      position: absolute;
-      content: 'Заполните обязательные поля!';
-      font-size: 16px;
-      color: #cc3333;
-      top: -35px;
-      left: 15%; } }
+        width: 80%; } }
 
 .section-copyright {
   height: 90px;
@@ -1072,12 +1060,11 @@ button {
   width: 30px;
   height: 30px;
   background: #FFFFFF;
-  border: 1px solid #AFAFAF;
   border-radius: 15px;
   cursor: pointer;
   position: absolute;
-  top: 15px;
-  right: 15px; }
+  top: 8px;
+  right: 11px; }
   @media (max-width: 767px) {
     #closepopup {
       top: -10px;
@@ -1099,8 +1086,8 @@ button {
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1; }
   .modal__popup i {
-    width: 29px;
-    height: 29px;
+    width: 30px;
+    height: 30px;
     background: url(https://codernote.ru/files/cross.png) no-repeat center center;
     background-size: 16px 16px;
     display: block; }
@@ -1152,13 +1139,6 @@ button {
     font-size: 24px; }
   .modal__form-input {
     margin-bottom: 30px; }
-    .modal__form-input._error::before {
-      position: absolute;
-      content: 'Заполните обязательные поля!';
-      font-size: 16px;
-      color: #cc3333;
-      top: 55%;
-      left: 5%; }
     .modal__form-input input {
       width: 313px;
       border: 1px solid #EBEBEB;
@@ -1179,8 +1159,7 @@ button {
       .modal__form-input input:focus {
         box-shadow: 0 0 15px #b9b9b9; }
       .modal__form-input input._error {
-        box-shadow: 0 0 10px #cc3333;
-        margin-bottom: 20px; }
+        box-shadow: 0 0 10px #cc3333; }
   .modal__form-button {
     text-align: center; }
     .modal__form-button button {
