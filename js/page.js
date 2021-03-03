@@ -1,4 +1,4 @@
-
+ // === accordion ===
 
 const accordOne = document.getElementsByClassName("accordOne");
 const accordTwo = document.getElementsByClassName("accordTwo");
@@ -75,3 +75,34 @@ for (i = 0; i < accordThree.length; i++) {
     } 
   });
 };
+
+
+ // ===  / accordion ===
+
+ // === scroll ===
+
+ let scrollButtonOne = document.querySelector('.whywe');
+ let scrollBlockOne = document.getElementById('whywe')
+
+ scrollButtonOne.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    scrollBlockOne.scrollIntoView({block: "center", behavior: "smooth"});
+});
+
+ let scrollButtonTwo = document.querySelector('.promo');
+ let scrollBlockTwo = document.getElementById('promo')
+
+ scrollButtonTwo.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    scrollBlockTwo.scrollIntoView({block: "center", behavior: "smooth"});
+});
+
+ let scrollButtonThree = document.querySelector('.instructions');
+ let scrollBlockThree = document.getElementById('instructions')
+
+ scrollButtonThree.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    scrollBlockThree.scrollIntoView({block: "center", behavior: "smooth"});
+});
+
+  // === / scroll ===

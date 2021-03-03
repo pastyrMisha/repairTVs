@@ -123,6 +123,9 @@ button {
             li {
                 a {
             color: $color-white;
+            &:hover {
+                color: #8d8d8d;
+            }
         }
     }
     }
@@ -137,6 +140,9 @@ button {
                 color: $color-white;
                 font-size: $h3-size;
                 font-weight: 700; 
+                &:hover {
+                    color: #8d8d8d;
+                }
             }
             span {
                 margin-left: auto;
@@ -163,7 +169,6 @@ button {
 // === / pre-header ===
 
 // === header ===
-
 
 .section-header {
     height: 75vh;
@@ -204,6 +209,7 @@ button {
                 content: url('/img/nike.svg');
                 padding-right: 20px;
                 vertical-align: middle;
+                
             }
         }
     }
@@ -220,6 +226,7 @@ button {
             content: url('/img/sale.png');
             top: 213px;
             left: -50px;
+            
         }
 
         &__form {
@@ -340,7 +347,7 @@ button {
 
                     &._error {
                         box-shadow: 0 0 10px $color-red;
-                        margin-bottom: 40px;
+                        
 
                     }
                 }

@@ -222,6 +222,8 @@ button {
       justify-content: space-between; }
       .section-preheader-content__nav-list li a {
         color: #fff; }
+        .section-preheader-content__nav-list li a:hover {
+          color: #8d8d8d; }
     .section-preheader-content__contacts {
       display: flex;
       flex-direction: column;
@@ -232,6 +234,8 @@ button {
         color: #fff;
         font-size: 22px;
         font-weight: 700; }
+        .section-preheader-content__contacts a:hover {
+          color: #8d8d8d; }
       .section-preheader-content__contacts span {
         margin-left: auto; }
 
@@ -352,8 +356,7 @@ button {
         .section-header-wrapper__form-input input:focus {
           box-shadow: 0 0 15px #b9b9b9; }
         .section-header-wrapper__form-input input._error {
-          box-shadow: 0 0 10px #cc3333;
-          margin-bottom: 40px; }
+          box-shadow: 0 0 10px #cc3333; }
       .section-header-wrapper__form-checkbox {
         font-size: 12px; }
         .section-header-wrapper__form-checkbox._error label::before {
