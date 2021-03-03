@@ -15,7 +15,7 @@ document.querySelector('.section-brands-content__button-next').addEventListener(
 document.querySelector('.section-brands-content__button-prev').addEventListener('click', function () {
     offset -= 236;
     if (offset < 0) {
-        offset = 1180;
+        offset = 2596;
     }
     sliderLine.style.left = -offset + 'px';
 });

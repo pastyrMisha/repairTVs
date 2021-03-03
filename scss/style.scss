@@ -16,10 +16,11 @@ $color-holder: #b9b9b9;
 $color-footer: #b8b8b8;
 $color-yellow: #FF8C00;
 $color-green: #32CD32;
-$h1-size: 28px;
-$h2-size: 23px;
-$h3-size: 18px;
-$h4-size: 14px;
+$h1-size: 48px;
+$h2-size: 24px;
+$h3-size: 22px;
+$h4-size: 21px;
+$h5-size: 18px;
 
 $screen-xs: 375px;
 $screen-sm: 576px;
@@ -44,8 +45,8 @@ body {
     @include font-roboto;
     background: white;
     color: #4b4b4b;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin: 0px;
+    font-size: 16px;
 }
 
 h1,
@@ -79,23 +80,70 @@ a {
 }
 
 header {
-    height: 800px;
     background: url('/img/main_back_2.jpg') no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
+button {
+    font-size: $h4-size;
+    background-color: $color-yellow;
+    &:hover {
 
+    }
+}
 // === / Common ===
 
 // === pre-header ===
 .section-preheader {
-    height: 90px;
+    height: 10vh;
     background: rgba(0, 0, 0, 0.5);
+    
 
     &-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-bottom: 10px;
+        height: 10vh;
+        &__logo, &__nav, &__contacts {
+            flex-basis: 393px;
+        }
+        &__logo {
+            padding-left: 20px;
+            a {
+                color: $color-white;                
+                font-weight: 700;
+                span {
+                    color: $color-yellow;
+                }
+            }
+        }
+        &__nav {
+            &-list {
+            display: flex;
+            justify-content: space-between;
+            li {
+                a {
+            color: $color-white;
+        }
+    }
+    }
+    }
+        &__contacts {
+            display: flex;
+            flex-direction: column;
+            color: $color-white;  
+            a {
+                margin-left: auto;
+                color: $color-white;
+                font-size: $h3-size;
+                font-weight: 700; 
+            }
+            span {
+                margin-left: auto;
+
+                
+            }
+
+        }
     }
 
     @media (max-width: $screen-md-max) {}
@@ -117,10 +165,40 @@ header {
 
 
 .section-header {
-
+    height: 75vh;
+    &-container {
+        max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    padding: 5% 0;
+    justify-content: space-between;
+   
+        
+    }
     &-content {
-
+        
+        align-self: center;
+        &__title {
+            margin-top: 0;
+            margin-bottom: 60px;
+            
+            color: $color-white;
+            font-weight: 300;
+            font-size: 36px;
+            b {
+                font-weight: 700;
+                line-height: 77px;
+                
+                font-size: $h1-size;
+                
+            }
+        }
         &__subtitle {
+            font-size: $h2-size;
+            font-weight: 700;
+            
+            color: #000;
             &::before {
                 content: url('/img/nike.svg');
                 padding-right: 20px;
@@ -134,22 +212,42 @@ header {
         align-items: center;
         justify-content: space-between;
         position: relative;
+        align-self: flex-end;
 
         &::after {
             position: absolute;
             content: url('/img/sale.png');
-            top: 158px;
+            top: 213px;
             left: -50px;
         }
 
         &__form {
             background: #fff;
-            max-width: 400px;
+            max-width: 515px;
             display: flex;
             flex-direction: column;
-            padding: 0px 20px 20px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
             box-shadow: 0 0 10px $color-holder;
             position: relative;
+            font-size: $h4-size;
+            height: 341px;
+
+            &-title {
+                font-size: $h4-size;
+                &::before {
+                    content: url('/img/pencil.svg');
+                    padding-right: 20px;
+                    vertical-align: middle;
+                }
+            }
+            &-sale {
+                font-size: $h4-size;
+                &__counter {
+                    display: inline-block;
+                }
+            }
 
 
             // === _sending ===
@@ -312,15 +410,13 @@ header {
             &-button {
                 text-align: center;
 
-
                 button {
                     margin: 0;
                     padding: 16px 20px;
-                    font-size: $h3-size;
+                    
                     text-transform: uppercase;
                     border: none;
                     border-radius: 4px;
-                    background-color: #03a9f4;
                     color: #fff;
                     cursor: pointer;
                     box-shadow: 0 5px 0 $color-grey;
@@ -328,10 +424,6 @@ header {
                     transition: background-color 0.5s ease 0s;
                     position: relative;
                     top: 0;
-
-                    &:hover {
-                        background-color: #00bcd4;
-                    }
 
                     &:active {
                         top: 3px;
@@ -552,22 +644,22 @@ header {
     background: $color-yellow;
 
     &-content {
-        margin-bottom: 95px;
-        margin-top: 30px;
+        margin: 60px 0 30px;
     }
 
     &-container {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
 
 
         &__box {
+            color: $color-white;
+            flex-basis: 216px;
+            height: 326px;
             display: flex;
             flex-direction: column;
-            box-shadow: 0px 7px 25px 1px rgba(0, 0, 0, 0.08);
-            justify-content: center;
-            padding: 20px;
+            
 
             &-icon {
                 text-align: center;
@@ -578,7 +670,13 @@ header {
             &-title,
             &-subtitle {
                 text-align: center;
-
+            }
+            &-title {
+                font-weight: 700;
+                font-size: $h2-size;
+            }
+            &-subtitle {
+                font-size: $h5-size;
             }
         }
     }
@@ -685,15 +783,21 @@ header {
 // === whywe ===
 .section-whywe {
     background: $color-grey;
-    padding: 60px 0px;
+    padding: 60px 0 0;
 
     &-content {
 
         &__title,
         &__subtitle {
             text-align: center;
-            font-size: $h3-size;
-            margin-bottom: 60px;
+        }
+        &__title {
+            font-size: 30px;
+            margin: 0;
+        }
+        &__subtitle {
+            font-size: $h2-size;
+            margin: 10px 0 60px;
         }
     }
 
@@ -704,6 +808,9 @@ header {
 
         &__box {
             flex-basis: 195px;
+            &:first-child {
+                margin-bottom: 60px;
+            }
 
             &-icon {
                 text-align: center;
@@ -717,14 +824,10 @@ header {
 
             &-title,
             &-subtitle {
-                font-size: $h4-size;
+                font-size: $h5-size;
                 text-align: center;
                 font-weight: 400;
             }
-
-
-
-
         }
     }
 
@@ -742,8 +845,15 @@ header {
 // === brands ===
 .section-brands {
     background: $color-grey;
+    padding-bottom: 90px;
 
     &-content {
+        &__title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            padding: 60px 0 15px;
+        }
         &__slider {
             height: 82px;
             overflow: hidden;
@@ -982,16 +1092,15 @@ header {
             &-button {
                 flex-grow: 1;
                 text-align: center;
-                background: #b8b8b8;
+                background: $color-green;
 
                 button {
                     margin: 0;
                     padding: 16px 20px;
-                    font-size: $h3-size;
+                    font-size: $h4-size;
                     text-transform: uppercase;
                     border: none;
                     border-radius: 4px;
-                    background-color: #03a9f4;
                     color: #fff;
                     cursor: pointer;
                     letter-spacing: 1px;
@@ -1000,7 +1109,7 @@ header {
                     top: 0;
 
                     &:hover {
-                        background-color: #00bcd4;
+                        
                     }
 
                     &:active {
@@ -1542,11 +1651,10 @@ header {
         button {
             margin: 0;
             padding: 16px 20px;
-            font-size: $h3-size;
+            font-size: $h4-size;
             text-transform: uppercase;
             border: none;
             border-radius: 4px;
-            background-color: #03a9f4;
             color: #fff;
             cursor: pointer;
             box-shadow: 0 5px 0 $color-grey;
@@ -1556,7 +1664,7 @@ header {
             top: 0;
 
             &:hover {
-                background-color: #00bcd4;
+                
             }
 
             &:active {

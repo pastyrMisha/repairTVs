@@ -164,8 +164,8 @@ body {
   font-family: 'Roboto', sans-serif;
   background: white;
   color: #4b4b4b;
-  margin-left: 0px;
-  margin-right: 0px; }
+  margin: 0px;
+  font-size: 16px; }
 
 h1,
 h2,
@@ -193,280 +193,338 @@ a {
   flex-direction: column; }
 
 header {
-  height: 800px;
   background: url("/img/main_back_2.jpg") no-repeat;
-  background-size: contain; }
+  background-size: cover; }
+
+button {
+  font-size: 21px;
+  background-color: #FF8C00; }
 
 .section-preheader {
-  height: 90px;
+  height: 10vh;
   background: rgba(0, 0, 0, 0.5); }
   .section-preheader-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 10px; }
-
-.section-header-content__subtitle::before {
-  content: url("/img/nike.svg");
-  padding-right: 20px;
-  vertical-align: middle; }
-
-.section-header-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative; }
-  .section-header-wrapper::after {
-    position: absolute;
-    content: url("/img/sale.png");
-    top: 158px;
-    left: -50px; }
-  .section-header-wrapper__form {
-    background: #fff;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    padding: 0px 20px 20px;
-    box-shadow: 0 0 10px #b9b9b9;
-    position: relative; }
-    .section-header-wrapper__form::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.9) url("../img/loading.gif") center/50px no-repeat;
-      opacity: 0;
-      visibility: hidden; }
-    .section-header-wrapper__form._sending::after {
-      opacity: 1;
-      visibility: visible; }
-    .section-header-wrapper__form::before {
-      content: 'Заявка отправлена!';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #eff6f5 url("../img/anim-check.gif") center/50px no-repeat;
-      opacity: 0;
-      visibility: hidden;
-      text-align: center;
-      line-height: 27; }
-    .section-header-wrapper__form._welldone::before {
-      opacity: 1;
-      visibility: visible;
-      z-index: 9; }
-    .section-header-wrapper__form-input, .section-header-wrapper__form-checkbox {
-      margin-bottom: 10px; }
-    .section-header-wrapper__form-input._error::before {
-      position: absolute;
-      content: 'Заполните обязательные поля!';
-      font-size: 16px;
-      color: #cc3333;
-      top: 60%;
-      left: 5%; }
-    .section-header-wrapper__form-input input {
-      width: 313px;
-      border: 1px solid #EBEBEB;
-      background: rgba(255, 255, 255, 0.25);
-      padding: 10px 20px;
-      outline: none;
-      border-radius: 2px;
-      transition: all 0.5s ease 0s; }
-      .section-header-wrapper__form-input input::-moz-placeholder {
-        color: #b9b9b9; }
-      .section-header-wrapper__form-input input:-ms-input-placeholder {
-        color: #b9b9b9; }
-      .section-header-wrapper__form-input input::placeholder {
-        color: #b9b9b9; }
-      .section-header-wrapper__form-input input:focus {
-        box-shadow: 0 0 15px #b9b9b9; }
-      .section-header-wrapper__form-input input._error {
-        box-shadow: 0 0 10px #cc3333;
-        margin-bottom: 40px; }
-    .section-header-wrapper__form-checkbox {
-      font-size: 12px; }
-      .section-header-wrapper__form-checkbox._error label::before {
-        box-shadow: 0 0 10px #cc3333;
-        transition: all 0.5s ease 0s; }
-      .section-header-wrapper__form-checkbox__input:checked + .section-header-wrapper__form-checkbox__label::after {
-        transform: scale(1); }
-      .section-header-wrapper__form-checkbox__input {
-        display: none; }
-      .section-header-wrapper__form-checkbox__label {
-        line-height: 140%;
-        display: inline-flex;
-        align-items: center;
-        position: relative; }
-        .section-header-wrapper__form-checkbox__label::before {
-          content: "";
-          align-self: flex-start;
-          flex: 0 0 24px;
-          height: 24px;
-          border-radius: 4px;
-          margin: 0px 10px 0px 0px;
-          background-color: #EBEBEB;
-          cursor: pointer; }
-        .section-header-wrapper__form-checkbox__label::after {
-          transition: transform 0.5s ease 0s;
-          content: "";
-          width: 16px;
-          height: 16px;
-          position: absolute;
-          top: 4px;
-          left: 4px;
-          background-color: #9e9e9e;
-          border-radius: 4px;
-          transform: scale(0); }
-        .section-header-wrapper__form-checkbox__label span a {
-          color: #9e9e9e; }
-    .section-header-wrapper__form-button {
-      text-align: center; }
-      .section-header-wrapper__form-button button {
-        margin: 0;
-        padding: 16px 20px;
-        font-size: 18px;
-        text-transform: uppercase;
-        border: none;
-        border-radius: 4px;
-        background-color: #03a9f4;
+    height: 10vh; }
+    .section-preheader-content__logo, .section-preheader-content__nav, .section-preheader-content__contacts {
+      flex-basis: 393px; }
+    .section-preheader-content__logo {
+      padding-left: 20px; }
+      .section-preheader-content__logo a {
         color: #fff;
-        cursor: pointer;
-        box-shadow: 0 5px 0 #EBEBEB;
-        letter-spacing: 1px;
-        transition: background-color 0.5s ease 0s;
-        position: relative;
-        top: 0; }
-        .section-header-wrapper__form-button button:hover {
-          background-color: #00bcd4; }
-        .section-header-wrapper__form-button button:active {
-          top: 3px;
-          box-shadow: 0 2px 0 #EBEBEB; }
-        .section-header-wrapper__form-button button:focus {
-          outline: none; }
+        font-weight: 700; }
+        .section-preheader-content__logo a span {
+          color: #FF8C00; }
+    .section-preheader-content__nav-list {
+      display: flex;
+      justify-content: space-between; }
+      .section-preheader-content__nav-list li a {
+        color: #fff; }
+    .section-preheader-content__contacts {
+      display: flex;
+      flex-direction: column;
+      color: #fff; }
+      .section-preheader-content__contacts a {
+        margin-left: auto;
+        color: #fff;
+        font-size: 22px;
+        font-weight: 700; }
+      .section-preheader-content__contacts span {
+        margin-left: auto; }
 
-@media (min-width: 1200px) {
-  .section-header-wrapper__subtitle {
-    padding-right: 30px; } }
-
-@media (min-width: 1200px) and (max-width: 1499px) {
-  .section-header-wrapper__image {
-    margin-left: -22px; } }
-
-@media (max-width: 1199px) {
+.section-header {
+  height: 75vh; }
+  .section-header-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    padding: 5% 0;
+    justify-content: space-between; }
+  .section-header-content {
+    align-self: center; }
+    .section-header-content__title {
+      margin-top: 0;
+      margin-bottom: 60px;
+      color: #fff;
+      font-weight: 300;
+      font-size: 36px; }
+      .section-header-content__title b {
+        font-weight: 700;
+        line-height: 77px;
+        font-size: 48px; }
+    .section-header-content__subtitle {
+      font-size: 24px;
+      font-weight: 700;
+      color: #000; }
+      .section-header-content__subtitle::before {
+        content: url("/img/nike.svg");
+        padding-right: 20px;
+        vertical-align: middle; }
   .section-header-wrapper {
-    flex-wrap: wrap; }
-    .section-header-wrapper__form::before {
-      content: 'Заявка отправлена!';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    align-self: flex-end; }
+    .section-header-wrapper::after {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #eff6f5 url("../img/anim-check.gif") center/50px no-repeat;
-      opacity: 0;
-      visibility: hidden;
-      text-align: center;
-      line-height: 28; } }
-
-@media (min-width: 768px) and (max-width: 1199px) {
-  .section-header-wrapper__image {
-    margin-left: 0px; }
-  .section-header-wrapper__subtitle {
-    max-width: 100%;
-    text-align: left;
-    padding: 30px; } }
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  .section-header-wrapper {
-    padding-bottom: 30px; }
-    .section-header-wrapper__image {
-      flex-basis: 30%;
-      margin-bottom: -30px; }
-    .section-header-wrapper__subtitle {
-      flex-basis: 30%; }
+      content: url("/img/sale.png");
+      top: 213px;
+      left: -50px; }
     .section-header-wrapper__form {
-      flex-basis: 29%; }
+      background: #fff;
+      max-width: 515px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 0 10px #b9b9b9;
+      position: relative;
+      font-size: 21px;
+      height: 341px; }
+      .section-header-wrapper__form-title {
+        font-size: 21px; }
+        .section-header-wrapper__form-title::before {
+          content: url("/img/pencil.svg");
+          padding-right: 20px;
+          vertical-align: middle; }
+      .section-header-wrapper__form-sale {
+        font-size: 21px; }
+        .section-header-wrapper__form-sale__counter {
+          display: inline-block; }
+      .section-header-wrapper__form::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9) url("../img/loading.gif") center/50px no-repeat;
+        opacity: 0;
+        visibility: hidden; }
+      .section-header-wrapper__form._sending::after {
+        opacity: 1;
+        visibility: visible; }
+      .section-header-wrapper__form::before {
+        content: 'Заявка отправлена!';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #eff6f5 url("../img/anim-check.gif") center/50px no-repeat;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        line-height: 27; }
+      .section-header-wrapper__form._welldone::before {
+        opacity: 1;
+        visibility: visible;
+        z-index: 9; }
+      .section-header-wrapper__form-input, .section-header-wrapper__form-checkbox {
+        margin-bottom: 10px; }
+      .section-header-wrapper__form-input._error::before {
+        position: absolute;
+        content: 'Заполните обязательные поля!';
+        font-size: 16px;
+        color: #cc3333;
+        top: 60%;
+        left: 5%; }
       .section-header-wrapper__form-input input {
-        width: 88%; } }
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .section-header-wrapper__image {
-    order: 1;
-    margin-left: 0px;
-    flex-basis: 50%; }
-  .section-header-wrapper__subtitle {
-    order: 3;
-    flex-basis: 100%;
-    border: 1px solid #363636;
-    margin-top: -5px; }
-  .section-header-wrapper__form {
-    flex-basis: 40%;
-    order: 2; }
-    .section-header-wrapper__form-input input {
-      width: 88%; } }
-
-@media (max-width: 767px) {
-  .section-header-wrapper {
-    flex-direction: column;
-    margin-bottom: 60px; }
+        width: 313px;
+        border: 1px solid #EBEBEB;
+        background: rgba(255, 255, 255, 0.25);
+        padding: 10px 20px;
+        outline: none;
+        border-radius: 2px;
+        transition: all 0.5s ease 0s; }
+        .section-header-wrapper__form-input input::-moz-placeholder {
+          color: #b9b9b9; }
+        .section-header-wrapper__form-input input:-ms-input-placeholder {
+          color: #b9b9b9; }
+        .section-header-wrapper__form-input input::placeholder {
+          color: #b9b9b9; }
+        .section-header-wrapper__form-input input:focus {
+          box-shadow: 0 0 15px #b9b9b9; }
+        .section-header-wrapper__form-input input._error {
+          box-shadow: 0 0 10px #cc3333;
+          margin-bottom: 40px; }
+      .section-header-wrapper__form-checkbox {
+        font-size: 12px; }
+        .section-header-wrapper__form-checkbox._error label::before {
+          box-shadow: 0 0 10px #cc3333;
+          transition: all 0.5s ease 0s; }
+        .section-header-wrapper__form-checkbox__input:checked + .section-header-wrapper__form-checkbox__label::after {
+          transform: scale(1); }
+        .section-header-wrapper__form-checkbox__input {
+          display: none; }
+        .section-header-wrapper__form-checkbox__label {
+          line-height: 140%;
+          display: inline-flex;
+          align-items: center;
+          position: relative; }
+          .section-header-wrapper__form-checkbox__label::before {
+            content: "";
+            align-self: flex-start;
+            flex: 0 0 24px;
+            height: 24px;
+            border-radius: 4px;
+            margin: 0px 10px 0px 0px;
+            background-color: #EBEBEB;
+            cursor: pointer; }
+          .section-header-wrapper__form-checkbox__label::after {
+            transition: transform 0.5s ease 0s;
+            content: "";
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            background-color: #9e9e9e;
+            border-radius: 4px;
+            transform: scale(0); }
+          .section-header-wrapper__form-checkbox__label span a {
+            color: #9e9e9e; }
+      .section-header-wrapper__form-button {
+        text-align: center; }
+        .section-header-wrapper__form-button button {
+          margin: 0;
+          padding: 16px 20px;
+          text-transform: uppercase;
+          border: none;
+          border-radius: 4px;
+          color: #fff;
+          cursor: pointer;
+          box-shadow: 0 5px 0 #EBEBEB;
+          letter-spacing: 1px;
+          transition: background-color 0.5s ease 0s;
+          position: relative;
+          top: 0; }
+          .section-header-wrapper__form-button button:active {
+            top: 3px;
+            box-shadow: 0 2px 0 #EBEBEB; }
+          .section-header-wrapper__form-button button:focus {
+            outline: none; }
+  @media (min-width: 1200px) {
+    .section-header-wrapper__subtitle {
+      padding-right: 30px; } }
+  @media (min-width: 1200px) and (max-width: 1499px) {
     .section-header-wrapper__image {
-      margin: 0 auto; }
-      .section-header-wrapper__image img {
-        width: 100%; }
+      margin-left: -22px; } }
+  @media (max-width: 1199px) {
+    .section-header-wrapper {
+      flex-wrap: wrap; }
+      .section-header-wrapper__form::before {
+        content: 'Заявка отправлена!';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #eff6f5 url("../img/anim-check.gif") center/50px no-repeat;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        line-height: 28; } }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .section-header-wrapper__image {
+      margin-left: 0px; }
     .section-header-wrapper__subtitle {
       max-width: 100%;
       text-align: left;
-      margin-right: 5px;
-      margin-left: 5px;
-      order: 3;
-      margin-top: 60px; }
-    .section-header-wrapper__form {
-      order: 2;
-      margin-top: -10px;
-      max-width: 80%;
-      width: 80%;
-      align-items: center; }
-      .section-header-wrapper__form-input {
-        width: 80%; }
-        .section-header-wrapper__form-input._error::before {
-          left: 15%; }
+      padding: 30px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .section-header-wrapper {
+      padding-bottom: 30px; }
+      .section-header-wrapper__image {
+        flex-basis: 30%;
+        margin-bottom: -30px; }
+      .section-header-wrapper__subtitle {
+        flex-basis: 30%; }
+      .section-header-wrapper__form {
+        flex-basis: 29%; }
         .section-header-wrapper__form-input input {
-          width: 90%; } }
-
-@media (max-width: 575px) {
-  .section-header-wrapper__form::before {
-    line-height: 29; } }
-
-@media (max-width: 360px) {
-  .section-header-wrapper__form::before {
-    line-height: 32; }
-  .section-header-wrapper__form-input._error::before {
-    font-size: 15px;
-    top: 245px; } }
+          width: 88%; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .section-header-wrapper__image {
+      order: 1;
+      margin-left: 0px;
+      flex-basis: 50%; }
+    .section-header-wrapper__subtitle {
+      order: 3;
+      flex-basis: 100%;
+      border: 1px solid #363636;
+      margin-top: -5px; }
+    .section-header-wrapper__form {
+      flex-basis: 40%;
+      order: 2; }
+      .section-header-wrapper__form-input input {
+        width: 88%; } }
+  @media (max-width: 767px) {
+    .section-header-wrapper {
+      flex-direction: column;
+      margin-bottom: 60px; }
+      .section-header-wrapper__image {
+        margin: 0 auto; }
+        .section-header-wrapper__image img {
+          width: 100%; }
+      .section-header-wrapper__subtitle {
+        max-width: 100%;
+        text-align: left;
+        margin-right: 5px;
+        margin-left: 5px;
+        order: 3;
+        margin-top: 60px; }
+      .section-header-wrapper__form {
+        order: 2;
+        margin-top: -10px;
+        max-width: 80%;
+        width: 80%;
+        align-items: center; }
+        .section-header-wrapper__form-input {
+          width: 80%; }
+          .section-header-wrapper__form-input._error::before {
+            left: 15%; }
+          .section-header-wrapper__form-input input {
+            width: 90%; } }
+  @media (max-width: 575px) {
+    .section-header-wrapper__form::before {
+      line-height: 29; } }
+  @media (max-width: 360px) {
+    .section-header-wrapper__form::before {
+      line-height: 32; }
+    .section-header-wrapper__form-input._error::before {
+      font-size: 15px;
+      top: 245px; } }
 
 .section-promo {
   background: #FF8C00; }
   .section-promo-content {
-    margin-bottom: 95px;
-    margin-top: 30px; }
+    margin: 60px 0 30px; }
   .section-promo-container {
     display: flex;
     align-items: center;
-    justify-content: space-around; }
+    justify-content: space-between; }
     .section-promo-container__box {
+      color: #fff;
+      flex-basis: 216px;
+      height: 326px;
       display: flex;
-      flex-direction: column;
-      box-shadow: 0px 7px 25px 1px rgba(0, 0, 0, 0.08);
-      justify-content: center;
-      padding: 20px; }
+      flex-direction: column; }
       .section-promo-container__box-icon {
         text-align: center;
         margin-bottom: 20px; }
       .section-promo-container__box-title, .section-promo-container__box-subtitle {
         text-align: center; }
+      .section-promo-container__box-title {
+        font-weight: 700;
+        font-size: 24px; }
+      .section-promo-container__box-subtitle {
+        font-size: 18px; }
   @media (min-width: 992px) and (max-width: 1199px) {
     .section-promo-wrapper {
       padding: 20px 0px 10px; }
@@ -519,17 +577,23 @@ header {
 
 .section-whywe {
   background: #EBEBEB;
-  padding: 60px 0px; }
+  padding: 60px 0 0; }
   .section-whywe-content__title, .section-whywe-content__subtitle {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 60px; }
+    text-align: center; }
+  .section-whywe-content__title {
+    font-size: 30px;
+    margin: 0; }
+  .section-whywe-content__subtitle {
+    font-size: 24px;
+    margin: 10px 0 60px; }
   .section-whywe-wrapper {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap; }
     .section-whywe-wrapper__box {
       flex-basis: 195px; }
+      .section-whywe-wrapper__box:first-child {
+        margin-bottom: 60px; }
       .section-whywe-wrapper__box-icon {
         text-align: center;
         margin-bottom: 30px; }
@@ -537,7 +601,7 @@ header {
           font-weight: 700;
           margin-bottom: 0; }
       .section-whywe-wrapper__box-title, .section-whywe-wrapper__box-subtitle {
-        font-size: 14px;
+        font-size: 18px;
         text-align: center;
         font-weight: 400; }
   @media (max-width: 575px) {
@@ -547,7 +611,13 @@ header {
         flex-wrap: wrap; } }
 
 .section-brands {
-  background: #EBEBEB; }
+  background: #EBEBEB;
+  padding-bottom: 90px; }
+  .section-brands-content__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 60px 0 15px; }
   .section-brands-content__slider {
     height: 82px;
     overflow: hidden; }
@@ -692,23 +762,20 @@ header {
       .section-footercall-wrapper__form-button {
         flex-grow: 1;
         text-align: center;
-        background: #b8b8b8; }
+        background: #32CD32; }
         .section-footercall-wrapper__form-button button {
           margin: 0;
           padding: 16px 20px;
-          font-size: 18px;
+          font-size: 21px;
           text-transform: uppercase;
           border: none;
           border-radius: 4px;
-          background-color: #03a9f4;
           color: #fff;
           cursor: pointer;
           letter-spacing: 1px;
           transition: background-color 0.5s ease 0s;
           position: relative;
           top: 0; }
-          .section-footercall-wrapper__form-button button:hover {
-            background-color: #00bcd4; }
           .section-footercall-wrapper__form-button button:active {
             top: 3px; }
           .section-footercall-wrapper__form-button button:focus {
@@ -1022,7 +1089,7 @@ header {
     z-index: 9; }
   .modal__form-title {
     padding-left: 10px;
-    font-size: 23px; }
+    font-size: 24px; }
   .modal__form-input {
     margin-bottom: 30px; }
     .modal__form-input._error::before {
@@ -1056,11 +1123,10 @@ header {
     .modal__form-button button {
       margin: 0;
       padding: 16px 20px;
-      font-size: 18px;
+      font-size: 21px;
       text-transform: uppercase;
       border: none;
       border-radius: 4px;
-      background-color: #03a9f4;
       color: #fff;
       cursor: pointer;
       box-shadow: 0 5px 0 #EBEBEB;
@@ -1068,8 +1134,6 @@ header {
       transition: background-color 0.5s ease 0s;
       position: relative;
       top: 0; }
-      .modal__form-button button:hover {
-        background-color: #00bcd4; }
       .modal__form-button button:active {
         top: 3px;
         box-shadow: 0 2px 0 #EBEBEB; }
@@ -1081,7 +1145,7 @@ header {
       max-width: 310px;
       text-align: center; }
       .modal__form-title {
-        font-size: 23px; }
+        font-size: 24px; }
       .modal__form-input {
         width: 250px; }
         .modal__form-input input {
