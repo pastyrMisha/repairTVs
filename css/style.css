@@ -225,7 +225,8 @@ button {
     .section-preheader-content__contacts {
       display: flex;
       flex-direction: column;
-      color: #fff; }
+      color: #fff;
+      line-height: 25px; }
       .section-preheader-content__contacts a {
         margin-left: auto;
         color: #fff;
@@ -678,8 +679,10 @@ button {
     transition: all 0.2s ease-out; }
     .section-instructions .panel ul {
       padding-left: 40px; }
-      .section-instructions .panel ul li span {
-        visibility: hidden; }
+      .section-instructions .panel ul li {
+        font-size: 18px; }
+        .section-instructions .panel ul li span {
+          visibility: hidden; }
   .section-instructions-content {
     display: flex;
     flex-direction: column;
@@ -692,18 +695,82 @@ button {
 
 .section-footercall {
   background: #32CD32; }
-  .section-footercall-wrapper {
+  .section-footercall-container {
+    max-width: 1180px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    flex-grow: 5;
-    text-align: center;
-    padding-top: 40px; }
-    .section-footercall-wrapper__form {
-      flex-grow: 2;
-      display: flex;
-      padding: 0px 0px 10px;
-      align-items: center;
+    padding: 30px 0 60px; }
+  .section-footercall-content {
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column; }
+    .section-footercall-content__title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700; }
+    .section-footercall-content__slider {
+      height: 150px;
+      overflow: hidden; }
+      .section-footercall-content__slider-line {
+        width: 720px;
+        height: 150px;
+        display: flex;
+        position: relative;
+        left: 0;
+        transition: all ease 1s; }
+        .section-footercall-content__slider-line img {
+          margin: 0 15px; }
+          .section-footercall-content__slider-line img:last-child {
+            margin-right: 30px; }
+    .section-footercall-content__button {
       position: relative; }
+      .section-footercall-content__button-prev, .section-footercall-content__button-next {
+        position: absolute;
+        border: 0;
+        background: transparent;
+        bottom: 65px; }
+      .section-footercall-content__button-prev {
+        left: -25px; }
+      .section-footercall-content__button-next {
+        right: -27px; }
+    .section-footercall-content__information {
+      margin-top: 60px;
+      display: flex;
+      align-items: center; }
+      .section-footercall-content__information-logo {
+        margin-left: -20px; }
+        .section-footercall-content__information-logo a {
+          color: #fff;
+          font-weight: 700; }
+          .section-footercall-content__information-logo a span {
+            color: #FF8C00; }
+      .section-footercall-content__information-contacts {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        line-height: 25px;
+        margin-left: auto;
+        margin-right: -20px; }
+        .section-footercall-content__information-contacts a {
+          margin-left: auto;
+          color: #fff;
+          font-size: 22px;
+          font-weight: 700; }
+        .section-footercall-content__information-contacts span {
+          margin-left: auto; }
+  .section-footercall-wrapper {
+    display: flex; }
+    .section-footercall-wrapper__form {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      position: relative;
+      justify-content: space-around; }
+      .section-footercall-wrapper__form-subtitle {
+        font-size: 18px;
+        text-align: center;
+        line-height: 25px;
+        color: #fff; }
       .section-footercall-wrapper__form::after {
         content: '';
         position: absolute;
@@ -731,38 +798,39 @@ button {
         opacity: 1;
         visibility: visible;
         z-index: 9; }
-      .section-footercall-wrapper__form-input {
-        flex-grow: 1; }
-        .section-footercall-wrapper__form-input._error::before {
-          position: absolute;
-          content: 'Заполните обязательные поля!';
-          font-size: 16px;
-          color: #cc3333;
-          bottom: -10px;
-          left: 36%; }
-        .section-footercall-wrapper__form-input input {
-          width: 75%;
-          border: 1px solid #EBEBEB;
-          background: #fff;
-          margin: 0;
-          padding: 10px 20px;
-          outline: none;
-          border-radius: 2px;
-          transition: all 0.5s ease 0s; }
-          .section-footercall-wrapper__form-input input::-moz-placeholder {
-            color: #b9b9b9; }
-          .section-footercall-wrapper__form-input input:-ms-input-placeholder {
-            color: #b9b9b9; }
-          .section-footercall-wrapper__form-input input::placeholder {
-            color: #b9b9b9; }
-          .section-footercall-wrapper__form-input input:focus {
-            box-shadow: 0 0 5px #fff; }
-          .section-footercall-wrapper__form-input input._error {
-            box-shadow: 0 0 10px #cc3333; }
+      .section-footercall-wrapper__form-input._error::before {
+        position: absolute;
+        content: 'Заполните обязательные поля!';
+        font-size: 16px;
+        color: #cc3333;
+        bottom: -10px;
+        left: 36%; }
+      .section-footercall-wrapper__form-input input {
+        width: 100%;
+        border: 1px solid #EBEBEB;
+        background: #fff;
+        margin: 0;
+        padding: 10px 20px;
+        outline: none;
+        border-radius: 2px;
+        transition: all 0.5s ease 0s; }
+        .section-footercall-wrapper__form-input input::-moz-placeholder {
+          color: #b9b9b9;
+          font-size: 21px; }
+        .section-footercall-wrapper__form-input input:-ms-input-placeholder {
+          color: #b9b9b9;
+          font-size: 21px; }
+        .section-footercall-wrapper__form-input input::placeholder {
+          color: #b9b9b9;
+          font-size: 21px; }
+        .section-footercall-wrapper__form-input input:focus {
+          box-shadow: 0 0 5px #fff; }
+        .section-footercall-wrapper__form-input input._error {
+          box-shadow: 0 0 10px #cc3333; }
       .section-footercall-wrapper__form-button {
-        flex-grow: 1;
         text-align: center;
-        background: #32CD32; }
+        background: #32CD32;
+        align-self: center; }
         .section-footercall-wrapper__form-button button {
           margin: 0;
           padding: 16px 20px;

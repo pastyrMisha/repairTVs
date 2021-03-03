@@ -130,7 +130,8 @@ button {
         &__contacts {
             display: flex;
             flex-direction: column;
-            color: $color-white;  
+            color: $color-white;
+            line-height: 25px;
             a {
                 margin-left: auto;
                 color: $color-white;
@@ -949,6 +950,7 @@ button {
             padding-left: 40px;
 
             li {
+                font-size: $h5-size;
                 span {
                     visibility: hidden;
 
@@ -981,26 +983,119 @@ button {
 // === footercall ===
 .section-footercall {
     background: $color-green;
+    &-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    padding: 30px 0 60px;
+    
+    
+    }
 
-    &-content {}
+    &-content {
+        padding: 0 60px;
+        display: flex;
+        flex-direction: column;
+        &__title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        &__slider {
+            height: 150px;
+            overflow: hidden;
+            
+
+            &-line {
+               width: 720px;
+                height: 150px;
+                display: flex;
+                position: relative;
+                left: 0;
+                transition: all ease 1s;
+                img {
+                    margin: 0 15px;
+                    &:last-child {
+                        margin-right: 30px;
+                    }
+                }
+
+            }
+        }
+
+        &__button {
+            position: relative;
+
+            &-prev,
+            &-next {
+                position: absolute;
+                border: 0;
+                background: transparent;
+                bottom: 65px;
+            }
+
+            &-prev {
+                left: -25px;
+            }
+
+            &-next {
+                right: -27px;
+
+            }
+        }
+        &__information {
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+        &-logo {
+            margin-left: -20px;
+            a {
+                color: $color-white;                
+                font-weight: 700;
+                span {
+                    color: $color-yellow;
+                }
+            }
+        }
+        &-contacts {
+            display: flex;
+            flex-direction: column;
+            color: $color-white;
+            line-height: 25px;
+            margin-left: auto;
+            margin-right: -20px;
+            a {
+                margin-left: auto;
+                color: $color-white;
+                font-size: $h3-size;
+                font-weight: 700;
+            }
+            span {
+                margin-left: auto;
+
+                
+            }
+
+        }
+    }
+    }
+        
 
     &-wrapper {
         display: flex;
-        flex-direction: column;
-        flex-grow: 5;
-        text-align: center;
-        padding-top: 40px;
-
-
-
-
-
         &__form {
-            flex-grow: 2;
             display: flex;
-            padding: 0px 0px 10px;
-            align-items: center;
+            flex-direction: column;
+            padding: 0;
             position: relative;
+            justify-content: space-around;
+            &-subtitle {
+                font-size: $h5-size;
+                text-align: center;
+                line-height: 25px;
+                color: $color-white;
+            }
 
 
             // === _footsending ===
@@ -1050,7 +1145,7 @@ button {
             // ===  / _welldone ===
 
             &-input {
-                flex-grow: 1;
+                
 
                 &._error {
                     &::before {
@@ -1064,7 +1159,7 @@ button {
                 }
 
                 input {
-                    width: 75%;
+                    width: 100%;
                     border: 1px solid $color-grey;
                     background: $color-white;
                     margin: 0;
@@ -1075,6 +1170,7 @@ button {
 
                     &::placeholder {
                         color: $color-holder;
+                        font-size: $h4-size;
                     }
 
                     &:focus {
@@ -1090,9 +1186,9 @@ button {
             }
 
             &-button {
-                flex-grow: 1;
                 text-align: center;
                 background: $color-green;
+                align-self: center;
 
                 button {
                     margin: 0;
