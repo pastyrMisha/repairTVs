@@ -332,13 +332,6 @@ button {
         z-index: 9; }
       .section-header-wrapper__form-input, .section-header-wrapper__form-checkbox {
         margin-bottom: 10px; }
-      .section-header-wrapper__form-input._error::before {
-        position: absolute;
-        content: 'Заполните обязательные поля!';
-        font-size: 16px;
-        color: #cc3333;
-        top: 60%;
-        left: 5%; }
       .section-header-wrapper__form-input input {
         width: 313px;
         border: 1px solid #EBEBEB;
@@ -801,13 +794,6 @@ button {
         opacity: 1;
         visibility: visible;
         z-index: 9; }
-      .section-footercall-wrapper__form-input._error::before {
-        position: absolute;
-        content: 'Заполните обязательные поля!';
-        font-size: 16px;
-        color: #cc3333;
-        bottom: -10px;
-        left: 36%; }
       .section-footercall-wrapper__form-input input {
         width: 100%;
         border: 1px solid #EBEBEB;
@@ -829,7 +815,8 @@ button {
         .section-footercall-wrapper__form-input input:focus {
           box-shadow: 0 0 5px #fff; }
         .section-footercall-wrapper__form-input input._error {
-          box-shadow: 0 0 10px #cc3333; }
+          outline: 2px solid #cc3333;
+          box-shadow: 0 0 20px #cc3333; }
       .section-footercall-wrapper__form-button {
         text-align: center;
         background: #32CD32;
@@ -1112,8 +1099,8 @@ button {
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1; }
   .modal__popup i {
-    width: 30px;
-    height: 30px;
+    width: 29px;
+    height: 29px;
     background: url(https://codernote.ru/files/cross.png) no-repeat center center;
     background-size: 16px 16px;
     display: block; }
@@ -1129,6 +1116,8 @@ button {
   box-shadow: 0 0 10px #b9b9b9;
   position: relative;
   align-items: center; }
+  .modal__form p {
+    font-size: 18px; }
   .modal__form::after {
     content: '';
     position: absolute;
@@ -1179,11 +1168,14 @@ button {
       border-radius: 4px;
       transition: all 0.5s ease 0s; }
       .modal__form-input input::-moz-placeholder {
-        color: #b9b9b9; }
+        color: #b9b9b9;
+        font-size: 18px; }
       .modal__form-input input:-ms-input-placeholder {
-        color: #b9b9b9; }
+        color: #b9b9b9;
+        font-size: 18px; }
       .modal__form-input input::placeholder {
-        color: #b9b9b9; }
+        color: #b9b9b9;
+        font-size: 18px; }
       .modal__form-input input:focus {
         box-shadow: 0 0 15px #b9b9b9; }
       .modal__form-input input._error {
