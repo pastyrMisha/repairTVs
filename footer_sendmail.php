@@ -30,8 +30,8 @@
     $mail->Body = $body;
 
     // Отправляем
-    if (!$mail->send()) {
-        $message = '1';
+    if ($mail->send()) {
+        $message = '3';
     }
     
     $response = ['message' => $message];

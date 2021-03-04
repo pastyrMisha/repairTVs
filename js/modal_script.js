@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             if (response.ok) {
                 let result = await response.json();
-                if (result.message === '1') {
+                if (result.message === '2') {
                 modalForm.reset();
                 modalForm.classList.remove('_modalsending');
                 modalForm.classList.add('_welldone');

@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             if (response.ok) {
                 let result = await response.json();
-                if (result.message === '1') {
+                if (result.message === '3') {
                 footerForm.reset();
                 footerForm.classList.remove('_footsending');
                 footerForm.classList.add('_welldone');

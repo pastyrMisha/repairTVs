@@ -337,7 +337,7 @@ button {
                 opacity: 0;
                 visibility: hidden;
                 text-align: center;
-                line-height: 27;
+                line-height: 22;
             }
 
             &._welldone {
@@ -524,7 +524,7 @@ button {
                     opacity: 0;
                     visibility: hidden;
                     text-align: center;
-                    line-height: 28;
+                    line-height: 22;
                 }
 
                 // ===  / _welldone ===
@@ -671,7 +671,7 @@ button {
 
                 // ===  _welldone ===
                 &::before {
-                    line-height: 29;
+                    // line-height: 29;
                 }
 
                 // ===  / _welldone ===
@@ -720,7 +720,7 @@ button {
 
                 // ===  _welldone ===
                 &::before {
-                    line-height: 32;
+                    // line-height: 32;
                 }
 
                 // ===  / _welldone ===
@@ -1419,7 +1419,7 @@ button {
 
             // ===  _welldone ===
             &::before {
-                content: '';
+                content: 'Заявка отправлена!';
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -1428,6 +1428,8 @@ button {
                 background: rgba(239, 246, 245, 1) url('../img/anim-check.gif') center / 50px no-repeat;
                 opacity: 0;
                 visibility: hidden;
+                line-height: 29;
+                text-align: center;
             }
 
             &._welldone {
@@ -1599,6 +1601,20 @@ button {
     //     }
 
     // }
+    @media (max-width: $screen-xs-max) {
+        &-wrapper {
+            &__form {
+               
+
+                // ===  _welldone ===
+                &::before {
+                    // line-height: 29;
+                }
+
+                // ===  / _welldone ===
+            }
+        }
+    }
 
     @media (max-width: 500px) {
         &-content {
@@ -1609,6 +1625,19 @@ button {
                 &-contacts {
                     margin: 0;
                 }
+            }
+        }
+    }
+    @media (max-width: $screen-xs) {
+        &-wrapper {
+            &__form {
+                // ===  _welldone ===
+                &::before {
+                    // line-height: 32;
+                }
+
+                // ===  / _welldone ===
+               
             }
         }
     }
@@ -2013,7 +2042,7 @@ button {
         opacity: 0;
         visibility: hidden;
         text-align: center;
-        line-height: 20;
+        line-height: 24;
     }
 
     &._welldone {

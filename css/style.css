@@ -343,7 +343,7 @@ button {
         opacity: 0;
         visibility: hidden;
         text-align: center;
-        line-height: 27; }
+        line-height: 22; }
       .section-header-wrapper__form._welldone::before {
         opacity: 1;
         visibility: visible;
@@ -445,7 +445,7 @@ button {
         opacity: 0;
         visibility: hidden;
         text-align: center;
-        line-height: 28; } }
+        line-height: 22; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .section-header-content__title {
       font-size: 32px; }
@@ -515,9 +515,7 @@ button {
         margin-top: -5px; } }
   @media (max-width: 575px) {
     .section-header-wrapper__form {
-      padding: 20px; }
-      .section-header-wrapper__form::before {
-        line-height: 29; } }
+      padding: 20px; } }
   @media (max-width: 500px) {
     .section-header-wrapper {
       align-self: center; }
@@ -536,8 +534,6 @@ button {
       width: 335px; }
       .section-header-wrapper__form-title::before {
         padding-right: 10px; }
-      .section-header-wrapper__form::before {
-        line-height: 32; }
       .section-header-wrapper__form-input._error::before {
         font-size: 15px;
         top: 245px; }
@@ -884,7 +880,7 @@ button {
         opacity: 1;
         visibility: visible; }
       .section-footercall-wrapper__form::before {
-        content: '';
+        content: 'Заявка отправлена!';
         position: absolute;
         top: 0;
         left: 0;
@@ -892,7 +888,9 @@ button {
         height: 100%;
         background: #eff6f5 url("../img/anim-check.gif") center/50px no-repeat;
         opacity: 0;
-        visibility: hidden; }
+        visibility: hidden;
+        line-height: 29;
+        text-align: center; }
       .section-footercall-wrapper__form._welldone::before {
         opacity: 1;
         visibility: visible;
@@ -1240,7 +1238,7 @@ button {
     opacity: 0;
     visibility: hidden;
     text-align: center;
-    line-height: 20; }
+    line-height: 24; }
   .modal__form._welldone::before {
     opacity: 1;
     visibility: visible;

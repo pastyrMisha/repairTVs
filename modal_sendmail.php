@@ -28,8 +28,8 @@
     $mail->Body = $body;
 
     // Отправляем
-    if (!$mail->send()) {
-        $message = '1';
+    if ($mail->send()) {
+        $message = '2';
     } 
 
     $response = ['message' => $message];
