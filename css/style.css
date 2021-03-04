@@ -198,6 +198,9 @@ header {
   @media (max-width: 991px) {
     header {
       background-position: 60%; } }
+  @media (max-width: 500px) {
+    header {
+      background-position: 98%; } }
 
 button {
   font-size: 21px;
@@ -241,6 +244,18 @@ button {
           color: #8d8d8d; }
       .section-preheader-content__contacts span {
         margin-left: auto; }
+  @media (max-width: 767px) {
+    .section-preheader-content__nav {
+      display: none; } }
+  @media (max-width: 500px) {
+    .section-preheader {
+      height: 90px; }
+      .section-preheader-content {
+        padding: 10px 0;
+        height: 90px;
+        flex-direction: column; }
+        .section-preheader-content__logo {
+          padding-left: 0; } }
 
 .section-header {
   height: 75vh; }
@@ -499,14 +514,35 @@ button {
         border: 1px solid #363636;
         margin-top: -5px; } }
   @media (max-width: 575px) {
-    .section-header-wrapper__form::before {
-      line-height: 29; } }
-  @media (max-width: 360px) {
-    .section-header-wrapper__form::before {
-      line-height: 32; }
-    .section-header-wrapper__form-input._error::before {
-      font-size: 15px;
-      top: 245px; } }
+    .section-header-wrapper__form {
+      padding: 20px; }
+      .section-header-wrapper__form::before {
+        line-height: 29; } }
+  @media (max-width: 500px) {
+    .section-header-wrapper {
+      align-self: center; }
+      .section-header-wrapper::after {
+        display: none; } }
+  @media (max-width: 375px) {
+    .section-header-content__title {
+      font-size: 24px; }
+      .section-header-content__title b {
+        font-size: 28px; }
+    .section-header-content__subtitle {
+      font-size: 18px; }
+      .section-header-content__subtitle::before {
+        padding-right: 10px; }
+    .section-header-wrapper__form {
+      width: 335px; }
+      .section-header-wrapper__form-title::before {
+        padding-right: 10px; }
+      .section-header-wrapper__form::before {
+        line-height: 32; }
+      .section-header-wrapper__form-input._error::before {
+        font-size: 15px;
+        top: 245px; }
+      .section-header-wrapper__form-input input {
+        width: 300px; } }
 
 .section-promo {
   background: #FF8C00; }
@@ -599,7 +635,7 @@ button {
     height: 82px;
     overflow: hidden; }
     .section-brands-content__slider-line {
-      width: 1920px;
+      max-width: 1920px;
       height: 82px;
       display: flex;
       position: relative;
@@ -711,6 +747,12 @@ button {
         width: 80%; }
       .section-instructions-content {
         left: 10%;
+        top: 30px; } }
+  @media (max-width: 680px) {
+    .section-instructions {
+      background-position-x: 74%; }
+      .section-instructions-content {
+        left: 0;
         top: 30px; } }
 
 .section-footercall {

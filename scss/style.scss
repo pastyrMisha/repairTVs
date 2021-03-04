@@ -16,6 +16,7 @@ $color-holder: #b9b9b9;
 $color-footer: #b8b8b8;
 $color-yellow: #FF8C00;
 $color-green: #32CD32;
+$color-blue: #03a9f4;
 $h1-size: 48px;
 $h2-size: 24px;
 $h3-size: 22px;
@@ -84,6 +85,9 @@ header {
     background-size: cover;
 @media (max-width: $screen-md-max) {
     background-position: 60%;
+}
+@media (max-width: 500px) {
+    background-position: 98%;
 }
 }
 
@@ -170,17 +174,29 @@ button {
         }
     }
 
-    @media (max-width: $screen-md-max) {}
+    @media (max-width: $screen-sm-max) {
+        &-content {
+        &__nav {
+            display: none;
+        }
+    }
+    }
 
-    @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {}
-
-    @media (max-width: $screen-sm-max) {}
-
-    @media (max-width: $screen-sm-max) {}
-
-    @media (max-width: $screen-xs-max) {}
-
-    @media (max-width: $screen-xs) {}
+    @media (max-width: 500px) {
+        height: 90px;
+        &-content {
+            padding: 10px 0;
+            height: 90px;
+            flex-direction: column;
+            &__logo {
+                padding-left: 0;
+            }
+        }
+    }
+    @media (max-width: 375px) {
+        &-content {}
+        // height: 100px;
+    }
 }
 
 // === / pre-header ===
@@ -685,7 +701,7 @@ button {
     @media (max-width: $screen-xs-max) {
         &-wrapper {
             &__form {
-
+                padding: 20px;
                 // ===  _welldone ===
                 &::before {
                     line-height: 29;
@@ -695,12 +711,51 @@ button {
             }
         }
     }
+    @media (max-width: 500px) {
+        &-container {
+            // padding: 20px 20px 0;
+            // margin-bottom: 40px;
+        }
+        
+        &-wrapper {
+            &::after {
+                display: none;
+            }
+            align-self: center;
+         
+            
+            &__form {
+            //    width: 320px;
+            
+            }
+        }
+    }
 
-    @media (max-width: 360px) {
+    @media (max-width: $screen-xs) {
+        &-content {
+            &__title {
+                font-size: $h2-size;
+                b {
+                    font-size: 28px;
+                }
+            }
+            &__subtitle {
+                &::before {
+                    padding-right: 10px;
+                }
+                font-size: $h5-size;
+            }
+        }
 
         &-wrapper {
             &__form {
-
+                    width: 335px;
+                    &-title {
+                        &::before {
+                        padding-right: 10px;
+                        }
+                    }
+                   
                 // ===  _welldone ===
                 &::before {
                     line-height: 32;
@@ -715,6 +770,9 @@ button {
                             top: 245px;
 
                         }
+                    }
+                    input {
+                        width: 300px;
                     }
                 }
             }
@@ -974,7 +1032,7 @@ button {
             overflow: hidden;
 
             &-line {
-                width: 1920px;
+                max-width: 1920px;
                 height: 82px;
                 display: flex;
                 position: relative;
@@ -1152,6 +1210,13 @@ button {
             }
         &-content {
             left: 10%;
+            top: 30px;
+        }
+     }
+     @media (max-width: 680px) {
+        background-position-x: 74%;
+        &-content {
+            left: 0;
             top: 30px;
         }
      }
