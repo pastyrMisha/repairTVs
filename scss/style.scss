@@ -1472,8 +1472,21 @@ button {
         &-wrapper {}
     }
 
-    @media (min-width: $screen-sm) {
-        &-content {}
+    @media (max-width: $screen-sm-max) {
+        &-container {
+            flex-direction: column;
+           
+           
+        }
+        &-content {
+
+        }
+        &-wrapper {
+            order: -1;
+            align-self: center;
+            height: 300px;
+        }
+
     }
 
     @media (max-width: $screen-xs-max) {

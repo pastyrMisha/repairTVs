@@ -868,6 +868,13 @@ button {
   @media (max-width: 991px) {
     .section-footercall-content__slider-line {
       width: 360px; } }
+  @media (max-width: 767px) {
+    .section-footercall-container {
+      flex-direction: column; }
+    .section-footercall-wrapper {
+      order: -1;
+      align-self: center;
+      height: 300px; } }
 
 .section-copyright {
   height: 90px;
