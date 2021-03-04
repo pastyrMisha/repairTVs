@@ -96,8 +96,6 @@ header {
 button {
     font-size: $h4-size;
     background-color: $color-yellow;
-
-    &:hover {}
 }
 
 // === / Common ===
@@ -198,11 +196,7 @@ button {
         }
     }
 
-    @media (max-width: 375px) {
-        &-content {}
 
-        // height: 100px;
-    }
 }
 
 // === / pre-header ===
@@ -364,16 +358,16 @@ button {
 
 
             &-input {
-                &._error {
-                    // &::before {
-                    //     position: absolute;
-                    //     content: 'Заполните обязательные поля!';
-                    //     font-size: 16px;
-                    //     color: $color-red;
-                    //     top: 60%;
-                    //     left: 5%;
-                    // }
-                }
+                // &._error {
+                // &::before {
+                //     position: absolute;
+                //     content: 'Заполните обязательные поля!';
+                //     font-size: 16px;
+                //     color: $color-red;
+                //     top: 60%;
+                //     left: 5%;
+                // }
+                // }
 
                 input {
                     width: 313px;
@@ -571,16 +565,6 @@ button {
                 flex-basis: 30%;
             }
 
-            &__form {
-                // flex-basis: 88%;
-                // margin-left: auto;
-
-                &-input {
-                    // input {
-                    //     width: 88%;
-                    // }
-                }
-            }
         }
     }
 
@@ -641,18 +625,6 @@ button {
                 border: 1px solid $color-black;
                 margin-top: -5px;
             }
-
-            &__form {
-
-                //             flex-basis: 88%;
-                // margin-left: auto;
-
-                &-input {
-                    // input {
-                    //     width: 88%;
-                    // }
-                }
-            }
         }
     }
 
@@ -666,15 +638,6 @@ button {
         &-content {
             width: 100%;
             margin-bottom: 30px;
-
-            &__title {
-
-
-
-                b {}
-            }
-
-            &__subtitle {}
         }
 
         &-wrapper {
@@ -698,18 +661,6 @@ button {
                 border: 1px solid $color-black;
                 margin-top: -5px;
             }
-
-            &__form {
-
-                //             flex-basis: 88%;
-                // margin-left: auto;
-
-                &-input {
-                    // input {
-                    //     width: 88%;
-                    // }
-                }
-            }
         }
     }
 
@@ -729,23 +680,12 @@ button {
     }
 
     @media (max-width: 500px) {
-        &-container {
-            // padding: 20px 20px 0;
-            // margin-bottom: 40px;
-        }
-
         &-wrapper {
             &::after {
                 display: none;
             }
 
             align-self: center;
-
-
-            &__form {
-                //    width: 320px;
-
-            }
         }
     }
 
@@ -894,8 +834,6 @@ button {
             &__box {
                 flex-basis: 50%;
 
-                &-icon {}
-
                 &-title {
                     font-size: $h3-size;
 
@@ -1029,16 +967,6 @@ button {
     @media (max-width: $screen-lg-max) {
         &-wrapper {
             justify-content: center;
-
-            &__box {
-                // &:nth-child(11) {
-                //     margin-left: 10%;
-                // }
-                // &:last-child {
-                //     margin-right: auto;
-                // }
-
-            }
         }
     }
 
@@ -1499,18 +1427,16 @@ button {
             // ===  / _welldone ===
 
             &-input {
-
-
-                &._error {
-                    // &::before {
-                    //     position: absolute;
-                    //     content: 'Заполните обязательные поля!';
-                    //     font-size: 16px;
-                    //     color: $color-red;
-                    //     bottom: -10px;
-                    //     left: 36%;
-                    // }
-                }
+                // &._error {
+                // &::before {
+                //     position: absolute;
+                //     content: 'Заполните обязательные поля!';
+                //     font-size: 16px;
+                //     color: $color-red;
+                //     bottom: -10px;
+                //     left: 36%;
+                // }
+                // }
 
                 input {
                     width: 100%;
@@ -1558,8 +1484,6 @@ button {
                     transition: background-color 0.5s ease 0s;
                     position: relative;
                     top: 0;
-
-                    &:hover {}
 
                     &:active {
                         top: 3px;
@@ -1627,20 +1551,12 @@ button {
         //     }
     }
 
-    @media (min-width: $screen-md) and (max-width: $screen-md-max) {
-        &-content {}
-
-        &-wrapper {}
-    }
-
     @media (max-width: $screen-sm-max) {
         &-container {
             flex-direction: column;
 
 
         }
-
-        &-content {}
 
         &-wrapper {
             order: -1;
@@ -1650,25 +1566,25 @@ button {
 
     }
 
-    @media (max-width: $screen-xs-max) {
-        &-wrapper {
-            &__form {
-                &-input {
-                    &._error {
-                        // &::before {
-                        //     position: absolute;
-                        //     content: 'Заполните обязательные поля!';
-                        //     font-size: 16px;
-                        //     color: $color-red;
-                        //     top: -35px;
-                        //     left: 15%;
-                        // }
-                    }
-                }
-            }
-        }
+    // @media (max-width: $screen-xs-max) {
+    //     &-wrapper {
+    //         &__form {
+    //             &-input {
+    //                 &._error {
+    //                     &::before {
+    //                         position: absolute;
+    //                         content: 'Заполните обязательные поля!';
+    //                         font-size: 16px;
+    //                         color: $color-red;
+    //                         top: -35px;
+    //                         left: 15%;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
 
-    }
+    // }
 
     @media (max-width: 500px) {
         &-content {
@@ -2104,16 +2020,16 @@ button {
     &-input {
         margin-bottom: 30px;
 
-        &._error {
-            // &::before {
-            //     position: absolute;
-            //     content: 'Заполните обязательные поля!';
-            //     font-size: 16px;
-            //     color: $color-red;
-            //     top: 55%;
-            //     left: 5%;
-            // }
-        }
+        // &._error {
+        // &::before {
+        //     position: absolute;
+        //     content: 'Заполните обязательные поля!';
+        //     font-size: 16px;
+        //     color: $color-red;
+        //     top: 55%;
+        //     left: 5%;
+        // }
+        // }
 
         input {
             width: 313px;
@@ -2158,8 +2074,6 @@ button {
             transition: background-color 0.5s ease 0s;
             position: relative;
             top: 0;
-
-            &:hover {}
 
             &:active {
                 top: 3px;
