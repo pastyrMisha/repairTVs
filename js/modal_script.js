@@ -13,17 +13,22 @@ document.addEventListener('DOMContentLoaded', function () {
         if (error === 0) {
             modalForm.classList.add('_modalsending');
 
-            let response = await fetch('modal_sendmail.php', {
+            let response = await fetch('/modal_sendmail.php', {
                 method: 'POST',
                 body: formData
             });
             if (response.ok) {
                 let result = await response.json();
-                alert(result.message);
+                if (result.message === '1') {
                 modalForm.reset();
                 modalForm.classList.remove('_modalsending');
+                form.classList.add('_welldone');
+                setTimeout(function () {
+                    form.classList.remove('_welldone');
+                }, 2000);
+            }
             } else {
-                alert('Ошибка');
+                alert('Ошибка, повторите отправку позже!');
                 modalForm.classList.remove('_modalsending');
             }
 

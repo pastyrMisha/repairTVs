@@ -13,17 +13,22 @@ document.addEventListener('DOMContentLoaded', function () {
         if (error === 0) {
             footerForm.classList.add('_footsending');
 
-            let response = await fetch('footer_sendmail.php', {
+            let response = await fetch('/footer_sendmail.php', {
                 method: 'POST',
                 body: formData
             });
             if (response.ok) {
                 let result = await response.json();
-                alert(result.message);
+                if (result.message === '1') {
                 footerForm.reset();
                 footerForm.classList.remove('_footsending');
+                form.classList.add('_welldone');
+                setTimeout(function () {
+                    form.classList.remove('_welldone');
+                }, 2000);
+            }
             } else {
-                alert('Ошибка');
+                alert('Ошибка, повторите отправку позже!');
                 footerForm.classList.remove('_footsending');
             }
 
