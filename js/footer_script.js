@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (result.message === '1') {
                 footerForm.reset();
                 footerForm.classList.remove('_footsending');
-                form.classList.add('_welldone');
+                footerForm.classList.add('_welldone');
                 setTimeout(function () {
-                    form.classList.remove('_welldone');
+                    footerForm.classList.remove('_welldone');
                 }, 2000);
             }
             } else {

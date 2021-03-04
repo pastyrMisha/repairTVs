@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (result.message === '1') {
                 modalForm.reset();
                 modalForm.classList.remove('_modalsending');
-                form.classList.add('_welldone');
+                modalForm.classList.add('_welldone');
                 setTimeout(function () {
-                    form.classList.remove('_welldone');
+                    modalForm.classList.remove('_welldone');
                 }, 2000);
             }
             } else {
