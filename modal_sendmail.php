@@ -11,15 +11,15 @@
     $mail->IsHTML(true);
 
     // От кого письмо
-    $mail->setFrom('support@skuptv.ru', 'Скупка TV');
+    $mail->setFrom('support@skuptv.ru', 'СЦ по ремонту ТВ');
     // Кому отправить
-    // $mail->addAddress('skupka-tv@mail.ru');
+    // $mail->addAddress('tv-remservis@mail.ru');
     $mail->addAddress('skkonkurent@yandex.ru');
     // Тема письма
     $mail->Subject = 'Заявка на обратный звонок';
 
     // Тело письма
-    $body = '<h1>Заявка на пепезвонить мне</h1>';
+    $body = '<h1>Заказ обратного звонка без подробностей</h1>';
 
     if(trim(!empty($_POST['modaltel']))){
         $body.='<p><strong>Телефон клиента:</strong> '.$_POST['modaltel'].'</p>';
@@ -29,10 +29,8 @@
 
     // Отправляем
     if (!$mail->send()) {
-        $message = 'Ошибка';
-    } else {
-        $message = 'Ваша заявка принята!';
-    }
+        $message = '1';
+    } 
 
     $response = ['message' => $message];
 

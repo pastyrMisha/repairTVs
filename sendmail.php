@@ -11,22 +11,16 @@
     $mail->IsHTML(true);
 
     // От кого письмо
-    $mail->setFrom('support@skuptv.ru', 'Скупка TV');
+    $mail->setFrom('support@skuptv.ru', 'СЦ по ремонту ТВ');
     // Кому отправить
-    // $mail->addAddress('skupka-tv@mail.ru');
+    // $mail->addAddress('tv-remservis@mail.ru');
     $mail->addAddress('skkonkurent@yandex.ru');
     // Тема письма
-    $mail->Subject = 'Заявка на скупку телевизора с сайта Скупка TV';
+    $mail->Subject = 'Заявка на ремонт телевизора Фикс Прайс ТВ Сервис со скидкой 30%';
 
     // Тело письма
-    $body = '<h1>Заявка на покупку ТВ</h1>';
+    $body = '<h1>Заявка на ремонт телевизора Фикс Прайс ТВ Сервис со скидкой 30% до 15:00</h1>';
 
-    if(trim(!empty($_POST['model']))){
-        $body.='<p><strong>Модель ТВ:</strong> '.$_POST['model'].'</p>';
-    }
-    if(trim(!empty($_POST['price']))){
-        $body.='<p><strong>Желаемая цена:</strong> '.$_POST['price'].'</p>';
-    }
     if(trim(!empty($_POST['tel']))){
         $body.='<p><strong>Телефон клиента:</strong> '.$_POST['tel'].'</p>';
     }
