@@ -425,6 +425,9 @@ button {
             box-shadow: 0 2px 0 #EBEBEB; }
           .section-header-wrapper__form-button button:focus {
             outline: none; }
+  @media (min-width: 1499px) {
+    .section-header-content__title {
+      text-shadow: black 1px 1px 0, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0; } }
   @media (min-width: 1200px) {
     .section-header-wrapper__subtitle {
       padding-right: 30px; } }
@@ -475,7 +478,6 @@ button {
       .section-header-content {
         flex-basis: 100%; }
         .section-header-content__title {
-          color: #32CD32;
           line-height: 47px;
           font-size: 32px;
           margin-bottom: 10px; }
