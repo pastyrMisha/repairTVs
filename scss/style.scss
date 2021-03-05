@@ -489,6 +489,13 @@ button {
         }
 
     }
+    @media (min-width: $screen-xl-max) {
+        &-content {
+            &__title {
+                text-shadow: black 1px 1px 0, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
+            }
+        }
+    }
 
     @media (min-width: $screen-xl) {
         &-wrapper {
@@ -590,7 +597,6 @@ button {
             flex-basis: 100%;
 
             &__title {
-                color: $color-green;
                 line-height: 47px;
                 font-size: 32px;
                 margin-bottom: 10px;
