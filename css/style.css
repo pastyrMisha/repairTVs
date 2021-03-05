@@ -656,14 +656,11 @@ button {
     font-weight: 700;
     padding: 60px 0 15px; }
   .section-brands-content__slider {
-    height: 82px;
-    overflow: hidden; }
+    max-width: 100%;
+    border: 2px solid black;
+    margin: 0 auto; }
     .section-brands-content__slider-line {
-      max-width: 1920px;
-      height: 82px;
       display: flex;
-      position: relative;
-      left: 0;
       transition: all ease 1s; }
   .section-brands-content__button {
     position: relative; }

@@ -1037,15 +1037,16 @@ button {
         }
 
         &__slider {
-            height: 82px;
-            overflow: hidden;
+           max-width: 100%;
+            border: 2px solid black;
+            // overflow: hidden;
+            margin: 0 auto;
+           
 
             &-line {
-                max-width: 1920px;
-                height: 82px;
+                // width: 1180px;
                 display: flex;
-                position: relative;
-                left: 0;
+                // position: relative;
                 transition: all ease 1s;
 
             }
