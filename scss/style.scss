@@ -489,7 +489,7 @@ button {
         }
 
     }
-    @media (min-width: $screen-xl-max) {
+    @media (min-width: 500px) and (max-width: $screen-xl-max) {
         &-content {
             &__title {
                 text-shadow: black 1px 1px 0, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
@@ -686,6 +686,11 @@ button {
     }
 
     @media (max-width: 500px) {
+        &-content {
+            &__title {
+                color: $color-green;
+            }
+        }
         &-wrapper {
             &::after {
                 display: none;
