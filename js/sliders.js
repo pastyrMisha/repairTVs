@@ -101,7 +101,6 @@ document.querySelector('.section-footercall-content__button-next').addEventListe
 document.querySelector('.section-footercall-content__button-prev').addEventListener('click', function () {
     let width = document.querySelector('.section-footercall-content__slider').offsetWidth;
     counter -= 180;
-    console.log(width);
 
     if (width == 720) {
         if (counter < 0) {
