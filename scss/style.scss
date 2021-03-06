@@ -674,13 +674,6 @@ button {
         &-wrapper {
             &__form {
                 padding: 20px;
-
-                // ===  _welldone ===
-                &::before {
-                    // line-height: 29;
-                }
-
-                // ===  / _welldone ===
             }
         }
     }
@@ -728,13 +721,6 @@ button {
                         padding-right: 10px;
                     }
                 }
-
-                // ===  _welldone ===
-                &::before {
-                    // line-height: 32;
-                }
-
-                // ===  / _welldone ===
                 &-input {
                     &._error {
                         &::before {
