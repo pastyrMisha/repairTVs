@@ -126,9 +126,7 @@ function handleTouchMove(event) {
                     offset = 3540;
             }
         };
-            
-
-            
+                        
         } else { 
             offset += 236;
             if (width == 1180) {
