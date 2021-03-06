@@ -7,6 +7,12 @@ const slider = document.querySelector('.section-footercall-content__slider');
 let width = document.querySelector('.section-brands-content__slider').offsetWidth;
 let offset = 0;
 let counter = 0;
+let x1 = null;
+
+sliderLine.addEventListener('touchstart', handleTouchStart, false);
+sliderLine.addEventListener('touchmove', handleTouchMove, false);
+
+
 
 document.querySelector('.section-brands-content__button-next').addEventListener('click', function () {
 
@@ -77,10 +83,7 @@ document.querySelector('.section-brands-content__button-prev').addEventListener(
 
 // swipe
 
-sliderLine.addEventListener('touchstart', handleTouchStart, false);
-sliderLine.addEventListener('touchmove', handleTouchMove, false);
 
-let x1 = null;
 
 function handleTouchStart(event) {
     const firstTouch = event.touches[0];
@@ -98,9 +101,61 @@ function handleTouchMove(event) {
        
         if (xDiff > 0 ) {
             offset -= 236;
+            if (width == 1180) {
+                if (offset < 0) {
+                    offset = 2596;
+            }
+        };
+            if (width == 944) {
+                if (offset < 0) {
+                    offset = 2832;
+            }
+        };
+            if (width == 708) {
+                if (offset < 0) {
+                    offset = 3068;
+            }
+        };
+            if (width == 472) {
+                if (offset < 0) {
+                    offset = 3304;
+            }
+        };
+            if (width == 236) {
+                if (offset < 0) {
+                    offset = 3540;
+            }
+        };
+            
+
             
         } else { 
             offset += 236;
+            if (width == 1180) {
+                if (offset > 2596) {
+                    offset = 0;
+            }
+        };
+            if (width == 944) {
+                if (offset > 2832) {
+                    offset = 0;
+            }
+        };
+            if (width == 708) {
+                if (offset > 3068) {
+                    offset = 0;
+            }
+        };
+            if (width == 472) {
+                if (offset > 3304) {
+                    offset = 0;
+            }
+        };
+            if (width == 236) {
+                if (offset > 3540) {
+                    offset = 0;
+            }
+        };
            
     }
     sliderLine.style.left = -offset + 'px';
