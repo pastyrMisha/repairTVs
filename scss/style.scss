@@ -1037,16 +1037,16 @@ button {
         }
 
         &__slider {
-           max-width: 100%;
-            border: 2px solid black;
-            // overflow: hidden;
+           width: 1180px;
+            overflow: hidden;
             margin: 0 auto;
            
 
             &-line {
-                // width: 1180px;
+                width: 3376px;
                 display: flex;
-                // position: relative;
+                position: relative;
+                left: 0;
                 transition: all ease 1s;
 
             }
@@ -1076,6 +1076,9 @@ button {
 
     @media (max-width: 1260px) {
         &-content {
+            &__slider {
+                width: 944px;
+            }
             &__button {
 
                 &-prev,
@@ -1095,7 +1098,27 @@ button {
             }
         }
     }
-
+    @media (max-width: 1000px) {
+        &-content {
+            &__slider {
+                width: 708px;
+            }
+        }
+    }
+    @media (max-width: 760px) {
+        &-content {
+            &__slider {
+                width: 472px;
+            }
+        }
+    }
+    @media (max-width: 530px) {
+        &-content {
+            &__slider {
+                width: 236px;
+            }
+        }
+    }
 }
 
 // === / brands ===
@@ -1300,13 +1323,13 @@ button {
         }
 
         &__slider {
-            height: 150px;
+            width: 720px;
             overflow: hidden;
+            margin: 0 auto;
 
 
             &-line {
-                width: 720px;
-                height: 150px;
+                width: 1080px;
                 display: flex;
                 position: relative;
                 left: 0;
@@ -1529,9 +1552,7 @@ button {
     @media (max-width: $screen-lg-max) {
         &-content {
             &__slider {
-                &-line {
-                    width: 540px;
-                }
+                width: 540px;
             }
         }
     }
@@ -1540,11 +1561,9 @@ button {
 
         &-content {
             &__slider {
-                &-line {
-                    width: 360px;
+                width: 360px;
                 }
             }
-        }
 
         //     &-content {}
 
@@ -1582,9 +1601,8 @@ button {
     @media (max-width: $screen-sm-max) {
         &-container {
             flex-direction: column;
-
-
         }
+        
 
         &-wrapper {
             order: -1;
@@ -1592,40 +1610,6 @@ button {
             height: 300px;
         }
 
-    }
-
-    // @media (max-width: $screen-xs-max) {
-    //     &-wrapper {
-    //         &__form {
-    //             &-input {
-    //                 &._error {
-    //                     &::before {
-    //                         position: absolute;
-    //                         content: 'Заполните обязательные поля!';
-    //                         font-size: 16px;
-    //                         color: $color-red;
-    //                         top: -35px;
-    //                         left: 15%;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-
-    // }
-    @media (max-width: $screen-xs-max) {
-        &-wrapper {
-            &__form {
-               
-
-                // ===  _welldone ===
-                &::before {
-                    // line-height: 29;
-                }
-
-                // ===  / _welldone ===
-            }
-        }
     }
 
     @media (max-width: 500px) {
@@ -1639,18 +1623,15 @@ button {
                 }
             }
         }
-    }
-    @media (max-width: $screen-xs) {
-        &-wrapper {
-            &__form {
-                // ===  _welldone ===
-                &::before {
-                    // line-height: 32;
-                }
-
-                // ===  / _welldone ===
-               
+        &-content {
+            &__slider {
+                width: 180px;
             }
+        }
+    }
+    @media (max-width: 330px) {
+        &-content {
+            padding: 0 40px;
         }
     }
 }

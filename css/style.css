@@ -656,11 +656,14 @@ button {
     font-weight: 700;
     padding: 60px 0 15px; }
   .section-brands-content__slider {
-    max-width: 100%;
-    border: 2px solid black;
+    width: 1180px;
+    overflow: hidden;
     margin: 0 auto; }
     .section-brands-content__slider-line {
+      width: 3376px;
       display: flex;
+      position: relative;
+      left: 0;
       transition: all ease 1s; }
   .section-brands-content__button {
     position: relative; }
@@ -674,6 +677,8 @@ button {
     .section-brands-content__button-next {
       right: -30px; }
   @media (max-width: 1260px) {
+    .section-brands-content__slider {
+      width: 944px; }
     .section-brands-content__button-prev, .section-brands-content__button-next {
       position: relative;
       bottom: -35px; }
@@ -682,6 +687,15 @@ button {
     .section-brands-content__button-next {
       right: 0;
       left: 50%; } }
+  @media (max-width: 1000px) {
+    .section-brands-content__slider {
+      width: 708px; } }
+  @media (max-width: 760px) {
+    .section-brands-content__slider {
+      width: 472px; } }
+  @media (max-width: 530px) {
+    .section-brands-content__slider {
+      width: 236px; } }
 
 .section-instructions {
   position: relative; }
@@ -805,11 +819,11 @@ button {
       font-size: 30px;
       font-weight: 700; }
     .section-footercall-content__slider {
-      height: 150px;
-      overflow: hidden; }
+      width: 720px;
+      overflow: hidden;
+      margin: 0 auto; }
       .section-footercall-content__slider-line {
-        width: 720px;
-        height: 150px;
+        width: 1080px;
         display: flex;
         position: relative;
         left: 0;
@@ -941,10 +955,10 @@ button {
           .section-footercall-wrapper__form-button button:focus {
             outline: none; }
   @media (max-width: 1199px) {
-    .section-footercall-content__slider-line {
+    .section-footercall-content__slider {
       width: 540px; } }
   @media (max-width: 991px) {
-    .section-footercall-content__slider-line {
+    .section-footercall-content__slider {
       width: 360px; } }
   @media (max-width: 767px) {
     .section-footercall-container {
@@ -958,7 +972,12 @@ button {
       flex-direction: column;
       align-content: center; }
       .section-footercall-content__information-contacts {
-        margin: 0; } }
+        margin: 0; }
+    .section-footercall-content__slider {
+      width: 180px; } }
+  @media (max-width: 330px) {
+    .section-footercall-content {
+      padding: 0 40px; } }
 
 .section-copyright {
   height: 90px;
