@@ -162,14 +162,6 @@ function handleTouchMove(event) {
 
 // /swipe
 
-
-
-
-
-
-
-
-
 // === / brands ===
 
 // === footercall ===
