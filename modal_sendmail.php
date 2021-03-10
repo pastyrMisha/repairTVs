@@ -13,7 +13,7 @@
     // От кого письмо
     $mail->setFrom('support@skuptv.ru', 'СЦ по ремонту ТВ');
     // Кому отправить
-    // $mail->addAddress('tv-remservis@mail.ru');
+    $mail->addAddress('tv-remservis@mail.ru');
     $mail->addAddress('skkonkurent@yandex.ru');
     // Тема письма
     $mail->Subject = 'Заявка на обратный звонок';
