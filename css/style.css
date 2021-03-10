@@ -316,9 +316,16 @@ button {
           padding-right: 20px;
           vertical-align: middle; }
       .section-header-wrapper__form-sale {
-        font-size: 21px; }
-        .section-header-wrapper__form-sale__counter {
-          display: inline-block; }
+        font-size: 21px;
+        display: flex;
+        flex-wrap: wrap; }
+        .section-header-wrapper__form-sale__timer {
+          padding-left: 10px; }
+          .section-header-wrapper__form-sale__timer-hours, .section-header-wrapper__form-sale__timer-minutes, .section-header-wrapper__form-sale__timer-seconds {
+            border: 1px solid #EBEBEB;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 4px;
+            border-radius: 2px; }
       .section-header-wrapper__form::after {
         content: '';
         position: absolute;

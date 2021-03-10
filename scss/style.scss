@@ -293,9 +293,16 @@ button {
 
             &-sale {
                 font-size: $h4-size;
-
-                &__counter {
-                    display: inline-block;
+                display: flex;
+                flex-wrap: wrap;
+                &__timer {
+                    padding-left: 10px;
+                        &-hours, &-minutes, &-seconds {
+                        border: 1px solid #EBEBEB;
+                        background: rgba(255, 255, 255, 0.25);
+                        padding: 4px;
+                        border-radius: 2px;
+                        }
                 }
             }
 
