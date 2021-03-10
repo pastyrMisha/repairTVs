@@ -1041,7 +1041,6 @@ button {
                 position: relative;
                 left: 0;
                 transition: all ease 1s;
-
             }
         }
 
@@ -1329,6 +1328,8 @@ button {
                 transition: all ease 1s;
 
                 img {
+                    width: 150px;
+                    height: 150px;
                     margin: 0 15px;
 
                     &:last-child {

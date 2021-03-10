@@ -836,6 +836,8 @@ button {
         left: 0;
         transition: all ease 1s; }
         .section-footercall-content__slider-line img {
+          width: 150px;
+          height: 150px;
           margin: 0 15px; }
           .section-footercall-content__slider-line img:last-child {
             margin-right: 30px; }
