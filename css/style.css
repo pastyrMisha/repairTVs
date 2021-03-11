@@ -319,6 +319,8 @@ button {
         font-size: 21px;
         display: flex;
         flex-wrap: wrap; }
+        .section-header-wrapper__form-sale__pretimer, .section-header-wrapper__form-sale__timer {
+          margin-bottom: 20px; }
         .section-header-wrapper__form-sale__timer {
           padding-left: 10px; }
           .section-header-wrapper__form-sale__timer-hours, .section-header-wrapper__form-sale__timer-minutes, .section-header-wrapper__form-sale__timer-seconds {
@@ -702,7 +704,11 @@ button {
       width: 472px; } }
   @media (max-width: 530px) {
     .section-brands-content__slider {
-      width: 236px; } }
+      width: 236px; }
+    .section-brands-content__button-prev {
+      left: 35%; }
+    .section-brands-content__button-next {
+      left: 45%; } }
 
 .section-instructions {
   position: relative; }

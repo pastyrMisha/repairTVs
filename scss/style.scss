@@ -295,6 +295,9 @@ button {
                 font-size: $h4-size;
                 display: flex;
                 flex-wrap: wrap;
+                &__pretimer, &__timer {
+                    margin-bottom: 20px;
+                }
                 &__timer {
                     padding-left: 10px;
                         &-hours, &-minutes, &-seconds {
@@ -1109,8 +1112,16 @@ button {
             &__slider {
                 width: 236px;
             }
-        }
+                &__button {
+                &-prev {
+                    left: 35%;
+                }
+                &-next {
+                    left: 45%;
+                }
+            }
     }
+}
 }
 
 // === / brands ===
