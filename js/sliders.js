@@ -83,8 +83,6 @@ document.querySelector('.section-brands-content__button-prev').addEventListener(
 
 // swipe
 
-
-
 function handleTouchStart(event) {
     const firstTouch = event.touches[0];
     x1 = firstTouch.clientX;
@@ -97,7 +95,7 @@ function handleTouchMove(event) {
     let x2 = event.touches[0].clientX;
     let xDiff = x2 - x1;
 
-        // right - left
+// right - left
        
         if (xDiff > 0 ) {
             offset -= 236;
@@ -221,4 +219,3 @@ document.querySelector('.section-footercall-content__button-prev').addEventListe
 });
 
 // === / footercall ===
-

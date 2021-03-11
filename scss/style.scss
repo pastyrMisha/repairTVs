@@ -1204,7 +1204,12 @@ button {
     }
 
     .panelThree__title {
-        padding-bottom: 20px;
+        padding: 10px 0;
+    }
+
+    .skuptv {
+        color: $color-blue;
+        text-decoration: underline;
     }
 
     @media (max-width: 1599px) {

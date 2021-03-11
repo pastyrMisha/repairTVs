@@ -760,7 +760,10 @@ button {
     right: 25%;
     bottom: 12%; }
   .section-instructions .panelThree__title {
-    padding-bottom: 20px; }
+    padding: 10px 0; }
+  .section-instructions .skuptv {
+    color: #03a9f4;
+    text-decoration: underline; }
   @media (max-width: 1599px) {
     .section-instructions {
       background: url("/img/family.jpg") no-repeat;
