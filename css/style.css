@@ -226,10 +226,15 @@ button {
     .section-preheader-content__nav-list {
       display: flex;
       justify-content: space-between; }
-      .section-preheader-content__nav-list li a {
+      .section-preheader-content__nav-list__whywe a, .section-preheader-content__nav-list__promo a, .section-preheader-content__nav-list__instructions a {
         color: #fff; }
-        .section-preheader-content__nav-list li a:hover {
+        .section-preheader-content__nav-list__whywe a:hover, .section-preheader-content__nav-list__promo a:hover, .section-preheader-content__nav-list__instructions a:hover {
           color: #8d8d8d; }
+      .section-preheader-content__nav-list__skuptv a {
+        color: #03a9f4; }
+        .section-preheader-content__nav-list__skuptv a:hover {
+          color: #00bcd4;
+          text-decoration: underline; }
     .section-preheader-content__contacts {
       display: flex;
       flex-direction: column;
@@ -752,6 +757,9 @@ button {
         font-size: 18px; }
         .section-instructions .panel ul li span {
           visibility: hidden; }
+  @media (max-width: 767px) {
+    .section-instructions .panel ul li {
+      font-size: 14px; } }
   .section-instructions-content {
     display: flex;
     flex-direction: column;
@@ -844,12 +852,67 @@ button {
         position: relative;
         left: 0;
         transition: all ease 1s; }
-        .section-footercall-content__slider-line img {
-          width: 150px;
-          height: 150px;
-          margin: 0 15px; }
-          .section-footercall-content__slider-line img:last-child {
+        .section-footercall-content__slider-line-person1 {
+          position: relative; }
+          .section-footercall-content__slider-line-person1 img {
+            width: 150px;
+            height: 150px;
+            margin: 0 15px; }
+          .section-footercall-content__slider-line-person1::after {
+            content: 'Сотрудник1';
+            position: absolute;
+            color: black;
+            left: 0;
+            bottom: 0; }
+        .section-footercall-content__slider-line-person2 {
+          position: relative; }
+          .section-footercall-content__slider-line-person2 img {
+            width: 150px;
+            height: 150px;
+            margin: 0 15px; }
+          .section-footercall-content__slider-line-person2::after {
+            content: 'Сотрудник1';
+            position: absolute;
+            color: black;
+            left: 0;
+            bottom: 0; }
+        .section-footercall-content__slider-line-person3 {
+          position: relative; }
+          .section-footercall-content__slider-line-person3 img {
+            width: 150px;
+            height: 150px;
+            margin: 0 15px; }
+          .section-footercall-content__slider-line-person3::after {
+            content: 'Сотрудник1';
+            position: absolute;
+            color: black;
+            left: 0;
+            bottom: 0; }
+        .section-footercall-content__slider-line-person4 {
+          position: relative; }
+          .section-footercall-content__slider-line-person4 img {
+            width: 150px;
+            height: 150px;
+            margin: 0 15px; }
+          .section-footercall-content__slider-line-person4::after {
+            content: 'Сотрудник1';
+            position: absolute;
+            color: black;
+            left: 0;
+            bottom: 0; }
+        .section-footercall-content__slider-line-person5 {
+          position: relative; }
+          .section-footercall-content__slider-line-person5 img {
+            width: 150px;
+            height: 150px;
+            margin: 0 15px;
             margin-right: 30px; }
+          .section-footercall-content__slider-line-person5::after {
+            content: 'Сотрудник1';
+            position: absolute;
+            color: black;
+            left: 0;
+            bottom: 0; }
     .section-footercall-content__button {
       position: relative; }
       .section-footercall-content__button-prev, .section-footercall-content__button-next {

@@ -27,9 +27,19 @@ function setClock(id, endtime) {
         minutes.textContent = t.minutes;
         seconds.textContent = t.seconds;
         
+        if (t.hours < 10) {
+            hours.textContent = "0" + t.hours;
+        };
+        if (t.minutes < 10) {
+            minutes.textContent = "0" + t.minutes;
+        };
+        if (t.seconds < 10) {
+            seconds.textContent = "0" + t.seconds;
+        };
+
         if (t.total <= 0) {
             clearInterval(timeInterval);
-        }
+        };
     }
 }
 

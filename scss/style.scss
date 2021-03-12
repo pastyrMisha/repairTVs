@@ -135,8 +135,7 @@ button {
             &-list {
                 display: flex;
                 justify-content: space-between;
-
-                li {
+                &__whywe, &__promo, &__instructions {
                     a {
                         color: $color-white;
 
@@ -145,6 +144,16 @@ button {
                         }
                     }
                 }
+                &__skuptv {
+                    a {
+                        color: $color-blue;
+                        
+                        &:hover {
+                            color: #00bcd4;
+                            text-decoration: underline;
+                        }
+                }
+            }
             }
         }
 
@@ -1190,7 +1199,15 @@ button {
             }
         }
     }
-
+@media (max-width: $screen-sm-max) {
+    .panel {
+        ul {
+            li {
+                font-size: 14px;
+            }
+        }
+    }
+}
     // === / accordion ===
 
 
@@ -1343,13 +1360,89 @@ button {
                 left: 0;
                 transition: all ease 1s;
 
+                &-person1 {
+                    position: relative;
                 img {
                     width: 150px;
                     height: 150px;
                     margin: 0 15px;
+                }
+                
+                    &::after {
+                        content: 'Сотрудник1';
+                        position: absolute;
+                        color: black;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
 
-                    &:last-child {
-                        margin-right: 30px;
+                &-person2 {
+                    position: relative;
+                img {
+                    width: 150px;
+                    height: 150px;
+                    margin: 0 15px;
+                }
+                
+                    &::after {
+                        content: 'Сотрудник1';
+                        position: absolute;
+                        color: black;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+
+                &-person3 {
+                    position: relative;
+                img {
+                    width: 150px;
+                    height: 150px;
+                    margin: 0 15px;
+                }
+                
+                    &::after {
+                        content: 'Сотрудник1';
+                        position: absolute;
+                        color: black;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+
+                &-person4 {
+                    position: relative;
+                img {
+                    width: 150px;
+                    height: 150px;
+                    margin: 0 15px;
+                }
+                
+                    &::after {
+                        content: 'Сотрудник1';
+                        position: absolute;
+                        color: black;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+
+                &-person5 {
+                    position: relative;
+                img {
+                    width: 150px;
+                    height: 150px;
+                    margin: 0 15px;
+                    margin-right: 30px;
+                }
+                
+                    &::after {
+                        content: 'Сотрудник1';
+                        position: absolute;
+                        color: black;
+                        left: 0;
+                        bottom: 0;
                     }
                 }
 
