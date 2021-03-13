@@ -81,7 +81,7 @@ for (i = 0; i < accordThree.length; i++) {
 
  // === scroll ===
 
- let scrollButtonOne = document.querySelector('.whywe');
+ let scrollButtonOne = document.querySelector('.section-whywe');
  let scrollBlockOne = document.getElementById('whywe')
 
  scrollButtonOne.addEventListener("click", function (evt) {
@@ -89,7 +89,7 @@ for (i = 0; i < accordThree.length; i++) {
     scrollBlockOne.scrollIntoView({block: "center", behavior: "smooth"});
 });
 
- let scrollButtonTwo = document.querySelector('.promo');
+ let scrollButtonTwo = document.querySelector('.section-promo');
  let scrollBlockTwo = document.getElementById('promo')
 
  scrollButtonTwo.addEventListener("click", function (evt) {
@@ -97,7 +97,7 @@ for (i = 0; i < accordThree.length; i++) {
     scrollBlockTwo.scrollIntoView({block: "center", behavior: "smooth"});
 });
 
- let scrollButtonThree = document.querySelector('.instructions');
+ let scrollButtonThree = document.querySelector('.section-instructions');
  let scrollBlockThree = document.getElementById('instructions')
 
  scrollButtonThree.addEventListener("click", function (evt) {
