@@ -1333,7 +1333,7 @@ button {
   width: 100%;
   z-index: 9990; }
 
-#modal {
+#modal, #order {
   position: fixed;
   max-width: 600px;
   height: auto;
@@ -1380,7 +1380,7 @@ button {
     .modal__popup i:focus {
       cursor: pointer; }
 
-.modal__form {
+.modal__form, .order__form {
   background: #fff;
   max-width: 400px;
   display: flex;
@@ -1389,9 +1389,9 @@ button {
   box-shadow: 0 0 10px #b9b9b9;
   position: relative;
   align-items: center; }
-  .modal__form p {
+  .modal__form p, .order__form p {
     font-size: 18px; }
-  .modal__form::after {
+  .modal__form::after, .order__form::after {
     content: '';
     position: absolute;
     top: 0;
@@ -1401,10 +1401,10 @@ button {
     background: rgba(255, 255, 255, 0.9) url("../img/loading.gif") center/50px no-repeat;
     opacity: 0;
     visibility: hidden; }
-  .modal__form._modalsending::after {
+  .modal__form._modalsending::after, .order__form._modalsending::after {
     opacity: 1;
     visibility: visible; }
-  .modal__form::before {
+  .modal__form::before, .order__form::before {
     content: 'Заявка отправлена!';
     position: absolute;
     top: 0;
@@ -1416,16 +1416,16 @@ button {
     visibility: hidden;
     text-align: center;
     line-height: 24; }
-  .modal__form._welldone::before {
+  .modal__form._welldone::before, .order__form._welldone::before {
     opacity: 1;
     visibility: visible;
     z-index: 9; }
-  .modal__form-title {
+  .modal__form-title, .order__form-title {
     padding-left: 10px;
     font-size: 24px; }
-  .modal__form-input {
+  .modal__form-input, .order__form-input {
     margin-bottom: 30px; }
-    .modal__form-input input {
+    .modal__form-input input, .order__form-input input {
       width: 313px;
       border: 1px solid #EBEBEB;
       background: rgba(255, 255, 255, 0.25);
@@ -1433,22 +1433,22 @@ button {
       outline: none;
       border-radius: 4px;
       transition: all 0.5s ease 0s; }
-      .modal__form-input input::-moz-placeholder {
+      .modal__form-input input::-moz-placeholder, .order__form-input input::-moz-placeholder {
         color: #b9b9b9;
         font-size: 18px; }
-      .modal__form-input input:-ms-input-placeholder {
+      .modal__form-input input:-ms-input-placeholder, .order__form-input input:-ms-input-placeholder {
         color: #b9b9b9;
         font-size: 18px; }
-      .modal__form-input input::placeholder {
+      .modal__form-input input::placeholder, .order__form-input input::placeholder {
         color: #b9b9b9;
         font-size: 18px; }
-      .modal__form-input input:focus {
+      .modal__form-input input:focus, .order__form-input input:focus {
         box-shadow: 0 0 15px #b9b9b9; }
-      .modal__form-input input._error {
+      .modal__form-input input._error, .order__form-input input._error {
         box-shadow: 0 0 10px #cc3333; }
-  .modal__form-button {
+  .modal__form-button, .order__form-button {
     text-align: center; }
-    .modal__form-button button {
+    .modal__form-button button, .order__form-button button {
       margin: 0;
       padding: 16px 20px;
       font-size: 21px;
@@ -1462,21 +1462,21 @@ button {
       transition: background-color 0.5s ease 0s;
       position: relative;
       top: 0; }
-      .modal__form-button button:active {
+      .modal__form-button button:active, .order__form-button button:active {
         top: 3px;
         box-shadow: 0 2px 0 #EBEBEB; }
-      .modal__form-button button:focus {
+      .modal__form-button button:focus, .order__form-button button:focus {
         outline: none; }
   @media (max-width: 767px) {
-    .modal__form {
+    .modal__form, .order__form {
       padding-left: 10px;
       max-width: 310px;
       text-align: center; }
-      .modal__form-title {
+      .modal__form-title, .order__form-title {
         font-size: 24px; }
-      .modal__form-input {
+      .modal__form-input, .order__form-input {
         width: 250px; }
-        .modal__form-input input {
+        .modal__form-input input, .order__form-input input {
           box-sizing: border-box;
           width: 100%; } }
 

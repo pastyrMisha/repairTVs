@@ -2162,7 +2162,7 @@ button {
     z-index: 9990;
 }
 
-#modal {
+#modal, #order {
     position: fixed;
     max-width: 600px;
     height: auto;
@@ -2217,7 +2217,7 @@ button {
     }
 }
 
-.modal__form {
+.modal__form, .order__form {
     background: #fff;
     max-width: 400px;
     display: flex;
