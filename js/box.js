@@ -52,9 +52,6 @@ window.addEventListener("DOMContentLoaded", () => {
     ]
 
     const buttons = document.querySelectorAll(".section-whywe-wrapper__box-icon");
-    
-    
-    
 
     const createOverlay = () => {
         const overlay = document.createElement("div");
@@ -62,8 +59,8 @@ window.addEventListener("DOMContentLoaded", () => {
         overlay.classList.add("overlay");
         overlay.addEventListener("click", () => {
             overlay.remove();
-            const floated = document.querySelector('.floated');
-            floated.remove();
+            const floated = document.querySelector('.section-whywe-content__floated');
+            floated.classList.remove("__show");
         })
         return overlay;
     }
@@ -77,16 +74,14 @@ window.addEventListener("DOMContentLoaded", () => {
         return closePopup;
     }
 
-
     const createBox = (title, price) => {
-        const div = document.createElement("div");       
-        div.classList.add("floated");
-        const spanTitle = document.createElement("span");
-        const spanPrice = document.createElement("span");
+        const div = document.querySelector(".section-whywe-content__floated");       
+        div.classList.add("__show");
+        const spanTitle = document.querySelector(".section-whywe-content__floated-subtitle__title");
+        const spanPrice = document.querySelector(".section-whywe-content__floated-detail__box-subtitle");
         spanPrice.textContent = price;
         spanTitle.textContent = title;
-        div.appendChild(spanTitle);
-        div.appendChild(spanPrice);
+        
         const closed = closePopup();
         document.body.appendChild(createOverlay());
         div.appendChild(closed);
@@ -94,19 +89,17 @@ window.addEventListener("DOMContentLoaded", () => {
             evt.preventDefault();
             const overlay = document.querySelector(".overlay");
             overlay.remove();
-            const floated = document.querySelector('.floated');
-            floated.remove();
+            const floated = document.querySelector('.section-whywe-content__floated');
+            floated.classList.remove("__show");
         });
         return div;
     }
 
-   
-    
     const removeDiv = () => {
         buttons.forEach(item => {
-            const div = document.querySelector(".floated");
+            const div = document.querySelector(".section-whywe-content__floated");
             if(div) {
-                div.remove();
+                div.classList.remove("__show");
             }
         })
     }
@@ -114,7 +107,7 @@ window.addEventListener("DOMContentLoaded", () => {
     buttons.forEach((elem, idx) => {
         elem.addEventListener("click", () => {
             removeDiv();
-            document.body.appendChild(createBox(data[idx].title, data[idx].price));
+            createBox(data[idx].title, data[idx].price);
         })
     })
 })
