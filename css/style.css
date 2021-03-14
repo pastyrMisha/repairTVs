@@ -964,7 +964,7 @@ button {
             height: 150px;
             margin: 0 15px; }
           .section-footercall-content__slider-line-person1::after {
-            content: 'Сотрудник1';
+            content: '';
             position: absolute;
             color: black;
             left: 0;
@@ -976,7 +976,7 @@ button {
             height: 150px;
             margin: 0 15px; }
           .section-footercall-content__slider-line-person2::after {
-            content: 'Сотрудник1';
+            content: '';
             position: absolute;
             color: black;
             left: 0;
@@ -988,7 +988,7 @@ button {
             height: 150px;
             margin: 0 15px; }
           .section-footercall-content__slider-line-person3::after {
-            content: 'Сотрудник1';
+            content: '';
             position: absolute;
             color: black;
             left: 0;
@@ -1000,7 +1000,7 @@ button {
             height: 150px;
             margin: 0 15px; }
           .section-footercall-content__slider-line-person4::after {
-            content: 'Сотрудник1';
+            content: '';
             position: absolute;
             color: black;
             left: 0;
@@ -1013,7 +1013,7 @@ button {
             margin: 0 15px;
             margin-right: 30px; }
           .section-footercall-content__slider-line-person5::after {
-            content: 'Сотрудник1';
+            content: '';
             position: absolute;
             color: black;
             left: 0;
