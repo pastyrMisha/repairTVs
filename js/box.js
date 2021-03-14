@@ -52,19 +52,23 @@ window.addEventListener("DOMContentLoaded", () => {
     ]
 
     const buttons = document.querySelectorAll(".section-whywe-wrapper__box-icon");
-
+    
+    
     
 
     const createOverlay = () => {
         const overlay = document.createElement("div");
         overlay.id = "overlay";
+        overlay.classList.add("overlay");
         return overlay;
     }
 
-
     const closePopup = () => {
         const closePopup = document.createElement("div");
+        const i = document.createElement("i");
         closePopup.id = "closepopup";
+        closePopup.classList.add("modal__popup");
+        closePopup.appendChild(i);
         return closePopup;
     }
 
@@ -100,4 +104,18 @@ window.addEventListener("DOMContentLoaded", () => {
             document.body.appendChild(createBox(data[idx].title, data[idx].price));
         })
     })
+
+    const closed = document.getElementById('closepopup');
+    const overlay = document.getElementById('overlay');
+    const floated = document.querySelector('.floated');
+
+
+
+
+    closed.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        overlay.remove();
+        floated.remove();
+    });
+
 })
