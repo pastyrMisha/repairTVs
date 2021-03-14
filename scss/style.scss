@@ -972,8 +972,19 @@ button {
             }
 
             &-icon {
+                position: relative;
                 text-align: center;
                 margin-bottom: 30px;
+            
+                &__floated {
+                    position: absolute;
+                    display: block;
+                    width: 100px;
+                    height: 100px;
+                    background: black;
+                    top: 0;
+                    left: 25%;
+                }
 
                 img {
                     cursor: pointer;
