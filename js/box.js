@@ -60,6 +60,11 @@ window.addEventListener("DOMContentLoaded", () => {
         const overlay = document.createElement("div");
         overlay.id = "overlay";
         overlay.classList.add("overlay");
+        overlay.addEventListener("click", () => {
+            overlay.remove();
+            const floated = document.querySelector('.floated');
+            floated.remove();
+        })
         return overlay;
     }
 
@@ -82,8 +87,16 @@ window.addEventListener("DOMContentLoaded", () => {
         spanTitle.textContent = title;
         div.appendChild(spanTitle);
         div.appendChild(spanPrice);
+        const closed = closePopup();
         document.body.appendChild(createOverlay());
-        div.appendChild(closePopup());
+        div.appendChild(closed);
+        closed.addEventListener("click", function (evt) {
+            evt.preventDefault();
+            const overlay = document.querySelector(".overlay");
+            overlay.remove();
+            const floated = document.querySelector('.floated');
+            floated.remove();
+        });
         return div;
     }
 
@@ -104,18 +117,4 @@ window.addEventListener("DOMContentLoaded", () => {
             document.body.appendChild(createBox(data[idx].title, data[idx].price));
         })
     })
-
-    const closed = document.getElementById('closepopup');
-    const overlay = document.getElementById('overlay');
-    const floated = document.querySelector('.floated');
-
-
-
-
-    closed.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        overlay.remove();
-        floated.remove();
-    });
-
 })
