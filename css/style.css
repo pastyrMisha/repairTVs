@@ -636,14 +636,6 @@ button {
         position: relative;
         text-align: center;
         margin-bottom: 30px; }
-        .section-whywe-wrapper__box-icon__floated {
-          position: absolute;
-          display: block;
-          width: 100px;
-          height: 100px;
-          background: black;
-          top: 0;
-          left: 25%; }
         .section-whywe-wrapper__box-icon img {
           cursor: pointer;
           /* Safari 6.0 - 9.0 */
@@ -1419,3 +1411,12 @@ button {
 
 .accShow {
   visibility: visible !important; }
+
+.floated {
+  position: fixed;
+  max-width: 600px;
+  height: auto;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
